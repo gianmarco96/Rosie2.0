@@ -16,21 +16,31 @@
 
 #include <dynamic_reconfigure/Reconfigure.h>
 #include <dynamic_reconfigure/IntParameter.h>
+#include <vector>
 
   /***********************************************************
    * Test: Subscibe to unity sphere position and move around
    **********************************************************/
 geometry_msgs::PoseStamped sphere_pose, old_sphere_pose;
-
+//geometry_msgs::PoseArray PoseArray;
+std::vector<geometry_msgs::Pose> pose_goals; 
 void test_sphere_position_callback(const geometry_msgs::PoseStamped::ConstPtr& msg){
     
     sphere_pose = *msg;
-    //sphere_pose.pose.orientation.y = -msg->pose.orientation.y; 
-    //std::cout << sphere_pose.pose << std::endl;
+}
+  /***********************************************************
+   * Test: Subscibe to unity sphere trajectory
+   **********************************************************/
+
+void goal_list_subscriber_callback(const geometry_msgs::PoseArray::ConstPtr& msg){
+  pose_goals.clear();
+  for(int i=0;i<msg->poses.size();i++){
+    pose_goals.push_back(msg->poses[i]);
+  }
 }
 
 /***********************************************************
-   * Test: Follow sphere continously
+   * Test: Follow sphere continuosly
    **********************************************************/
 void follow_sphere(moveit::planning_interface::MoveGroupInterface& move_group, moveit::planning_interface::MoveGroupInterface::Plan& my_plan, const robot_state::JointModelGroup* joint_model_group, moveit_visual_tools::MoveItVisualTools& visual_tools){
 
@@ -45,8 +55,6 @@ void follow_sphere(moveit::planning_interface::MoveGroupInterface& move_group, m
         ros::Duration(0.5).sleep();
         old_sphere_pose.pose = sphere_pose.pose;
         std::cout << old_sphere_pose.pose;
-
-        // Function to set number of set points
     }
     
 }
@@ -71,35 +79,20 @@ void set_waypoints_c_srv(ros::NodeHandle& node_handle, int min_waypoint)
 
 }
 
+
+
+
 int main(int argc, char **argv)
 {
  
   ros::init(argc, argv, "move_group_interface_tutorial");
   ros::NodeHandle node_handle;
 
-  set_waypoints_c_srv(node_handle, 50);
+  set_waypoints_c_srv(node_handle, 2);
 
 
-  /*std::cout << "ouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu" << std::endl;
-  std::cout << "Size is:" << srv.request.config.ints.size() << std::endl;
-    if (client.call(srv))
-  {
-      std::cout << srv.response << std::endl;
-  }
-  else
-  {
-      std::cout << "service not called" << std::endl;
-  }*/
-
-  //std::string = ""
-//   srv.request.config.ints[0].name = "minimum_waypoint_count";
-
-
-
-  /***********************************************************
-   * Test: Subscibe to unity sphere position and move around
-   **********************************************************/
-  ros::Subscriber sub_unity_sphere = node_handle.subscribe("/test_sphere_position", 1000, test_sphere_position_callback);
+  //ros::Subscriber sub_unity_sphere = node_handle.subscribe("/test_sphere_position", 1000, test_sphere_position_callback);
+  ros::Subscriber sub_goal_list = node_handle.subscribe("/goal_poses", 1000, goal_list_subscriber_callback);
 
   ros::AsyncSpinner spinner(1);
   spinner.start(); 
@@ -112,8 +105,11 @@ int main(int argc, char **argv)
 
   const robot_state::JointModelGroup* joint_model_group =
       move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
+
+  
   
   geometry_msgs::PoseStamped target_pose1 = move_group.getCurrentPose();
+  //std::cout << target_pose1 << std::endl;
   
   //std::cout<< move_group.getCurrentJointValues();
   moveit::core::RobotStatePtr current_state = move_group.getCurrentState();
@@ -122,18 +118,18 @@ int main(int argc, char **argv)
   moveit_visual_tools::MoveItVisualTools visual_tools("world");
   visual_tools.deleteAllMarkers();
 
-  //
+  
   // Next get the current set of joint values for the group.
   std::vector<double> joint_group_positions;
   current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
 
-  std::cout << joint_group_positions[0] << std::endl;
-  std::cout << joint_group_positions[1] << std::endl;
-  std::cout << joint_group_positions[2] << std::endl;
-  std::cout << joint_group_positions[3] << std::endl;
-  std::cout << joint_group_positions[4] << std::endl;
-  std::cout << joint_group_positions[5] << std::endl;
-  std::cout << joint_group_positions[6] << std::endl;
+  // std::cout << joint_group_positions[0] << std::endl;
+  // std::cout << joint_group_positions[1] << std::endl;
+  // std::cout << joint_group_positions[2] << std::endl;
+  // std::cout << joint_group_positions[3] << std::endl;
+  // std::cout << joint_group_positions[4] << std::endl;
+  // std::cout << joint_group_positions[5] << std::endl;
+  // std::cout << joint_group_positions[6] << std::endl;
 
 
   joint_group_positions[0] = 0;
@@ -146,36 +142,72 @@ int main(int argc, char **argv)
 
   move_group.setJointValueTarget(joint_group_positions);
   move_group.move();
-  ROS_INFO("Moving to 0 position and waiting 10 seconds");
-  //ros::Duration(5).sleep();
+  ROS_INFO("Moving to 0 position and waiting 5 seconds");
+  ros::Duration(5).sleep();
 
 
   Eigen::Isometry3d text_pose = Eigen::Isometry3d::Identity();
-  text_pose.translation().z() = target_pose1.pose.position.z + 0.1;
-  visual_tools.publishText(text_pose, "Porco DIO!", rvt::WHITE, rvt::XLARGE);
+  // text_pose.translation().z() = target_pose1.pose.position.z + 0.1;
+  // visual_tools.publishText(text_pose, "Testing text!", rvt::WHITE, rvt::XLARGE);
   //ros::Duration(10).sleep();
-  visual_tools.trigger();
+  // visual_tools.trigger();
 
-  move_group.setPoseTarget(target_pose1.pose);
+  // move_group.setPoseTarget(target_pose1.pose);
   
   moveit::planning_interface::MoveGroupInterface::Plan my_plan;
-  bool success = (move_group.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
-  ROS_INFO_NAMED("tutorial", "Visualizing plan 1 as trajectory line");
-  visual_tools.publishAxisLabeled(target_pose1.pose, "pose1");
-  visual_tools.publishText(text_pose, "Pose Goal", rvt::WHITE, rvt::XLARGE);
-  visual_tools.publishTrajectoryLine(my_plan.trajectory_, joint_model_group);
-  std::cout << my_plan.trajectory_ << std::endl;
+  
+  // bool success = (move_group.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+  // ROS_INFO_NAMED("tutorial", "Visualizing plan 1 as trajectory line");
+  // visual_tools.publishAxisLabeled(target_pose1.pose, "pose1");
+  // visual_tools.publishText(text_pose, "Pose Goal", rvt::WHITE, rvt::XLARGE);
+  // visual_tools.publishTrajectoryLine(my_plan.trajectory_, joint_model_group);
+  // std::cout << my_plan.trajectory_ << std::endl;
+  // visual_tools.trigger();
+
+  //ROS_INFO_NAMED("tutorial", "Visualizing plan 1 (pose goal) %s", success ? "" : "FAILED");
+
+  // move_group.execute(my_plan.trajectory_);
+  // ros::Duration(10).sleep();
+  // ROS_INFO("Going back to initial position and waiting 10 seconds");
+
+  //geometry_msgs::Pose target_pose3 = move_group.getCurrentPose().pose;
+
+  std::vector<geometry_msgs::Pose> waypoints;
+  
+  move_group.setMaxVelocityScalingFactor(0.1);
+
+  moveit_msgs::RobotTrajectory trajectory;
+  const double jump_threshold = 0.0;
+  const double eef_step = 0.01;
+  double fraction = move_group.computeCartesianPath(pose_goals, eef_step, jump_threshold, trajectory);
+  ROS_INFO_NAMED("tutorial","Visualizing plan 4 (Cartesian path) (%.2f%% acheived)", fraction * 100.0);
+
+
+
+  visual_tools.deleteAllMarkers();
+  visual_tools.publishText(text_pose, "Joint Space Goal", rvt::WHITE, rvt::XLARGE);
+  visual_tools.publishPath(waypoints, rvt::LIME_GREEN, rvt::SMALL);
+  for (std::size_t i = 0; i < pose_goals.size(); ++i)
+    visual_tools.publishAxisLabeled(pose_goals[i], "pt" + std::to_string(i), rvt::SMALL);
   visual_tools.trigger();
+  //visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window to continue the demo");
+  ros::Duration(5).sleep();
 
-  ROS_INFO_NAMED("tutorial", "Visualizing plan 1 (pose goal) %s", success ? "" : "FAILED");
 
-  move_group.execute(my_plan.trajectory_);
-  ROS_INFO("Going back to initial position and waiting 10 seconds");
+  my_plan.trajectory_= trajectory;
+  move_group.execute(my_plan);
+  ros::Duration(10).sleep();
 
-  /* while(ros::ok){
-      follow_sphere(move_group, my_plan, joint_model_group, visual_tools);
-  }
-*/
+   /*while(ros::ok){
+
+      //follow_sphere(move_group, my_plan, joint_model_group, visual_tools);
+      //std::cout <<PoseArray;
+      ros::Duration(1).sleep();
+      std::cout << pose_goals[0];
+      
+  }*/
+
   
   return 0;
 }
+
