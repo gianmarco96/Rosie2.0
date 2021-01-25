@@ -66,6 +66,8 @@
     <Compile Include="Assets\CreatePath.cs" />
     <Compile Include="Assets\Geometry\msg\PoseArrayFixed.cs" />
     <Compile Include="Assets\KSMP.cs" />
+    <Compile Include="Assets\MoveGroupResultSub.cs" />
+    <Compile Include="Assets\MoveItActionClient.cs" />
     <Compile Include="Assets\PoseArrayPyblisher.cs" />
     <Compile Include="Assets\RosSharp\Scripts\Extensions\HeaderExtensions.cs" />
     <Compile Include="Assets\RosSharp\Scripts\Extensions\TransformExtensions.cs" />
