@@ -10,7 +10,7 @@ Initialise a catkin workspace and clone this repository
 mkdir R2_iiwa_stack_ws && cd R2_iiwa_stack_ws && mkdir src
 catkin_init_workspace
 git clone https://github.com/gianmarco96/Rosie2.0
-cp Rosie2.0/iiwa_stack/ src
+cp -r -f Rosie2.0/iiwa_stack/ src
 ```
 Download the dependencies 
 ```
