@@ -33,7 +33,7 @@ public class KSMP : MonoBehaviour
     private RosConnector RosConnector;
     private JointStatePatcher JointPatcher;
     private JointStateSubscriber JointStateSubscriber;
-    private UnityFibonacciActionClient UnityFibonacciActionClient;
+    //private UnityFibonacciActionClient UnityFibonacciActionClient;
     
 
     public void Awake()
@@ -58,8 +58,10 @@ public class KSMP : MonoBehaviour
                         JointStateSubscriber = gameObject.GetComponent<JointStateSubscriber>();
                         JointStateSubscriber.Topic = Topic;
 
-                        UnityFibonacciActionClient = gameObject.AddComponent<UnityFibonacciActionClient>();
-                        UnityFibonacciActionClient.actionName = ActionName;
+                        gameObject.AddComponent<MoveGroupResultSub>();
+
+                        //UnityFibonacciActionClient = gameObject.AddComponent<UnityFibonacciActionClient>();
+                        //UnityFibonacciActionClient.actionName = ActionName;
                         break;
 
                     case EntityType.AGV:

@@ -2984,7 +2984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c40b69421b8d42548a962fcf02f77bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NetworkMasterIP: ws://172.31.1.150:9090
+  NetworkMasterIP: ws://192.168.0.51:9090
   TypeOfKSMP: 0
   TypeOfEntity: 0
   Topic: /iiwa/joint_states
