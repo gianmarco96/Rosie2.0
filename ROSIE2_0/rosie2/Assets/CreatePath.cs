@@ -32,10 +32,11 @@ public class CreatePath : MonoBehaviour
                 string name = "Sphere_" + counter.ToString();
                 GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 sphere.name = name;
-                sphere.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+                sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 sphere.transform.position = new Vector3(-((i + 1) / 10.0f), 2.0f, 0f);
                 //Debug.Log(counter);
                 sphere.gameObject.tag = "Respawn";
+                sphere.AddComponent<MoveObjWithMouse>();
                 counter++;
             }
             

@@ -3,6 +3,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 
 namespace RosSharp.RosBridgeClient
@@ -11,8 +12,9 @@ namespace RosSharp.RosBridgeClient
     {
         //public Transform PublishedTransform;
         public string FrameId = "world";
-        
-        
+        private GameObject button; 
+
+
 
         public MessageTypes.Geometry.PoseArrayFixed message;
         
@@ -22,6 +24,9 @@ namespace RosSharp.RosBridgeClient
         {
             //message.poses;
             //  message.poses
+            button = GameObject.Find("Button");
+            button.GetComponent<Button>().onClick.AddListener(OnClick);
+
         }
         protected override void Start()
         {
@@ -75,10 +80,14 @@ namespace RosSharp.RosBridgeClient
                 message.poses[i].orientation.z = spehere.transform.rotation.y;
             }
             //Debug.Log(message.poses.Count);
-            Publish(message);
+            
         }
 
-     
-
+        void OnClick()
+        {
+            Debug.Log("Send Goal");
+            Publish(message);
+        }
+        
     }
 }

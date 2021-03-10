@@ -47,6 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>4.8.2.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2019.4.13f1</UnityVersion>
@@ -64,10 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CreatePath.cs" />
+    <Compile Include="Assets\ExecuteTrajFeedbackSub.cs" />
     <Compile Include="Assets\Geometry\msg\PoseArrayFixed.cs" />
     <Compile Include="Assets\KSMP.cs" />
-    <Compile Include="Assets\MoveGroupResultSub.cs" />
-    <Compile Include="Assets\MoveItActionClient.cs" />
+    <Compile Include="Assets\MoveObjWithMouse.cs" />
     <Compile Include="Assets\PoseArrayPyblisher.cs" />
     <Compile Include="Assets\RosSharp\Scripts\Extensions\HeaderExtensions.cs" />
     <Compile Include="Assets\RosSharp\Scripts\Extensions\TransformExtensions.cs" />
@@ -128,6 +129,9 @@
     <Compile Include="Assets\RosSharp\Scripts\Urdf\UrdfComponents\UrdfRobot.cs" />
     <Compile Include="Assets\RosSharp\Scripts\Urdf\UrdfComponents\UrdfVisual.cs" />
     <Compile Include="Assets\RosSharp\Scripts\Urdf\UrdfComponents\UrdfVisuals.cs" />
+    <Compile Include="Assets\TrajectorySub.cs" />
+    <Compile Include="Assets\Unused Scripts\MoveItActionClient.cs" />
+    <Compile Include="Assets\Unused Scripts\UnityMoveItActionClient.cs" />
     <None Include="Assets\RosSharp\Plugins\External\websocket-sharp.xml" />
     <None Include="Assets\RosSharp\Plugins\External\Newtonsoft.Json.xml" />
     <None Include="Assets\RosSharp\Plugins\External\Newtonsoft.Json.Bson.xml" />
@@ -315,46 +319,46 @@
       <HintPath>C:/Users/me1gmp/AppData/Local/Programs/Microsoft VS Code/2019.4.13f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="MessageGeneration">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/MessageGeneration.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/MessageGeneration.dll</HintPath>
     </Reference>
     <Reference Include="RosBridgeClient">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/RosBridgeClient.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/RosBridgeClient.dll</HintPath>
     </Reference>
     <Reference Include="Urdf">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Urdf.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Urdf.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json.Bson">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/External/Newtonsoft.Json.Bson.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/External/Newtonsoft.Json.Bson.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/External/websocket-sharp.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/External/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Buffers.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Memory.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encodings.Web">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Text.Encodings.Web.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Text.Encodings.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Json">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Text.Json.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Channels">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Threading.Channels.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Threading.Channels.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Assets/RosSharp/Plugins/Microsoft/System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Users/me1gmp/AppData/Local/Programs/Microsoft VS Code/2019.4.13f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -711,31 +715,31 @@
       <HintPath>C:/Users/me1gmp/AppData/Local/Programs/Microsoft VS Code/2019.4.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/me1gmp/Documents/Unity Projects/ROSIE2_0/rosie2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/ROSIE2_0/rosie2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

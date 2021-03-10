@@ -58,7 +58,8 @@ public class KSMP : MonoBehaviour
                         JointStateSubscriber = gameObject.GetComponent<JointStateSubscriber>();
                         JointStateSubscriber.Topic = Topic;
 
-                        gameObject.AddComponent<MoveGroupResultSub>();
+                        gameObject.AddComponent<ExecuteTrajFeedbackSub>();
+                        gameObject.AddComponent<TrajectorySub>();
 
                         //UnityFibonacciActionClient = gameObject.AddComponent<UnityFibonacciActionClient>();
                         //UnityFibonacciActionClient.actionName = ActionName;
@@ -96,6 +97,7 @@ public class KSMP : MonoBehaviour
         {
             gameObject.AddComponent<CreatePath>();
         }
+        
     }
     
 
