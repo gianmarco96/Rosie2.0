@@ -22,14 +22,16 @@ public enum EntityType
 public class KSMP : MonoBehaviour
 {
 
-    public string NetworkMasterIP = "ws://192.168.0.51:9090";
+    public string NetworkMasterIP = "ws://192.168.0.67:9090";
     public KSMPs TypeOfKSMP = KSMPs.ROS;
     public EntityType TypeOfEntity = EntityType.manipulator;
-    public string Topic = "joint_states";
+    public bool planRobot = false;
+    public string Topic = "iiwa/joint_states";
     public string ActionName = "move_group";
 
 
     private UrdfRobot UrdfRobot;
+    private GameObject RosConnectorObj;
     private RosConnector RosConnector;
     private JointStatePatcher JointPatcher;
     private JointStateSubscriber JointStateSubscriber;
@@ -43,9 +45,21 @@ public class KSMP : MonoBehaviour
         switch (TypeOfKSMP)
         {
             case KSMPs.ROS:
-                gameObject.AddComponent<RosConnector>();
-                gameObject.AddComponent<PoseArrayPublisher>();
-                RosConnector = GetComponent<RosConnector>();
+                //gameObject.AddComponent<RosConnector>();
+                //gameObject.AddComponent<PoseArrayPublisher>();
+                // If it does not exist
+                if (GameObject.Find("RosConnector") == null)
+                {
+                    RosConnectorObj = new GameObject("RosConnector");
+                }
+                else
+                    RosConnectorObj = GameObject.Find("RosConnector");
+
+
+
+                RosConnector = RosConnectorObj.AddComponent<RosConnector>();
+                //gameObject.AddComponent<PoseArrayPublisher>();
+                //RosConnector = RosConnectorObj.GetComponent<RosConnector>();
                 RosConnector.RosBridgeServerUrl = NetworkMasterIP;
                 switch (TypeOfEntity)
                 {
@@ -54,15 +68,24 @@ public class KSMP : MonoBehaviour
                         JointPatcher = gameObject.GetComponent<JointStatePatcher>();
                         JointPatcher.UrdfRobot = UrdfRobot;
                         JointPatcher.SetSubscribeJointStates(true);
+                        if (!planRobot)
+                        {
+                            JointStateSubscriber = gameObject.GetComponent<JointStateSubscriber>();
+                            JointStateSubscriber.Topic = Topic;
 
-                        JointStateSubscriber = gameObject.GetComponent<JointStateSubscriber>();
-                        JointStateSubscriber.Topic = Topic;
+                            gameObject.AddComponent<ExecuteTrajFeedbackSub>();
+                            gameObject.AddComponent<TrajectorySub>();
+                        }
+                        else
+                        {
+                            gameObject.AddComponent<DisplayTrajectorySub>();
+                        }
+                        
+                        /*****************************
+                         * Testing: uncomment JointState Subscri and delete DisplatT
+                         * ***************************/
+                        //gameObject.AddComponent<DisplayTrajectorySub>();
 
-                        gameObject.AddComponent<ExecuteTrajFeedbackSub>();
-                        gameObject.AddComponent<TrajectorySub>();
-
-                        //UnityFibonacciActionClient = gameObject.AddComponent<UnityFibonacciActionClient>();
-                        //UnityFibonacciActionClient.actionName = ActionName;
                         break;
 
                     case EntityType.AGV:
@@ -92,13 +115,15 @@ public class KSMP : MonoBehaviour
     }
 
     public void OnValidate()
-    {
-        if (gameObject.GetComponent<CreatePath>() == null)
+    { if(!planRobot)
         {
-            gameObject.AddComponent<CreatePath>();
+            if (gameObject.GetComponent<CreatePath>() == null)
+            {
+                gameObject.AddComponent<CreatePath>();
+            }
         }
-        
     }
+
     
 
 }

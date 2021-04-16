@@ -17,7 +17,7 @@ using UnityEngine;
 
 namespace RosSharp.RosBridgeClient
 {
-    public class TrajectorySub : UnitySubscriber<MessageTypes.Moveit.RobotTrajectory>
+    public class TrajectorySub : FixedUnitySubscriber<MessageTypes.Moveit.RobotTrajectory>
     {
         public string traj_stats;
         private MessageTypes.Moveit.RobotTrajectory trajectory;

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace RosSharp.RosBridgeClient
 {
-    public class PoseArrayPublisher : UnityPublisher<MessageTypes.Geometry.PoseArrayFixed>
+    public class PoseArrayPublisher : FixedUnityPublisher<MessageTypes.Geometry.PoseArrayFixed>
     {
         //public Transform PublishedTransform;
         public string FrameId = "world";

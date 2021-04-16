@@ -20,7 +20,7 @@ using UnityEngine.UI;
 
 namespace RosSharp.RosBridgeClient
 {
-    public class ExecuteTrajFeedbackSub : UnitySubscriber<MessageTypes.Moveit.ExecuteTrajectoryActionFeedback>
+    public class ExecuteTrajFeedbackSub : FixedUnitySubscriber<MessageTypes.Moveit.ExecuteTrajectoryActionFeedback>
     {
         public string status = "Pending";
         private GameObject MoveitStatText;

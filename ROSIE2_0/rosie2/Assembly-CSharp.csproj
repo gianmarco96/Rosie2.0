@@ -65,7 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CreatePath.cs" />
+    <Compile Include="Assets\DisplayTrajectorySub.cs" />
     <Compile Include="Assets\ExecuteTrajFeedbackSub.cs" />
+    <Compile Include="Assets\FixedUnityPublisher.cs" />
+    <Compile Include="Assets\FixedUnitySubscriber.cs" />
     <Compile Include="Assets\Geometry\msg\PoseArrayFixed.cs" />
     <Compile Include="Assets\KSMP.cs" />
     <Compile Include="Assets\MoveObjWithMouse.cs" />
@@ -132,6 +135,7 @@
     <Compile Include="Assets\TrajectorySub.cs" />
     <Compile Include="Assets\Unused Scripts\MoveItActionClient.cs" />
     <Compile Include="Assets\Unused Scripts\UnityMoveItActionClient.cs" />
+    <Compile Include="Assets\testPlann.cs" />
     <None Include="Assets\RosSharp\Plugins\External\websocket-sharp.xml" />
     <None Include="Assets\RosSharp\Plugins\External\Newtonsoft.Json.xml" />
     <None Include="Assets\RosSharp\Plugins\External\Newtonsoft.Json.Bson.xml" />

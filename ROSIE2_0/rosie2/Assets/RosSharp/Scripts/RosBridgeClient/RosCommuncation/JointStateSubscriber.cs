@@ -14,10 +14,11 @@ limitations under the License.
 */
 
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace RosSharp.RosBridgeClient
 {
-    public class JointStateSubscriber : UnitySubscriber<MessageTypes.Sensor.JointState>
+    public class JointStateSubscriber : FixedUnitySubscriber<MessageTypes.Sensor.JointState>
     {
         public List<string> JointNames;
         public List<JointStateWriter> JointStateWriters;
