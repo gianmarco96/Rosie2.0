@@ -17,7 +17,7 @@ using System.Collections.Generic;
 
 namespace RosSharp.RosBridgeClient
 {
-    public class TestPlann : UnitySubscriber<MessageTypes.Moveit.DisplayTrajectory>
+    public class TestPlann : FixedUnitySubscriber<MessageTypes.Moveit.DisplayTrajectory>
     {
         public List<string> JointNames;
         public List<JointStateWriter> JointStateWriters;

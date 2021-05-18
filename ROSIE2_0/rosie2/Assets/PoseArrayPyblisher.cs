@@ -17,7 +17,8 @@ namespace RosSharp.RosBridgeClient
 
 
         public MessageTypes.Geometry.PoseArrayFixed message;
-        
+
+        private CreatePath createPath;
         private int numberOfPoints;
 
         private void Awake()
@@ -63,7 +64,8 @@ namespace RosSharp.RosBridgeClient
 
             
            
-            numberOfPoints = gameObject.GetComponent<CreatePath>().numberOfWaypoints;
+            createPath = gameObject.GetComponent<CreatePath>();
+            numberOfPoints = createPath.numberOfWaypoints;
             message.poses.Clear();
             for (int i = 0; i < numberOfPoints; i++)
             {

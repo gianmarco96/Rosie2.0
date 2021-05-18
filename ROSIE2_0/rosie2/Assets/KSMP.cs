@@ -41,7 +41,7 @@ public class KSMP : MonoBehaviour
     public void Awake()
     {
         UrdfRobot = GetComponents<UrdfRobot>()[0];
-       // gameObject.AddComponent<Status2Text>();
+        // gameObject.AddComponent<Status2Text>();
         switch (TypeOfKSMP)
         {
             case KSMPs.ROS:
@@ -56,10 +56,12 @@ public class KSMP : MonoBehaviour
                     RosConnectorObj = GameObject.Find("RosConnector");
 
 
-
-                RosConnector = RosConnectorObj.AddComponent<RosConnector>();
-                gameObject.AddComponent<PoseArrayPublisher>();
-                //RosConnector = RosConnectorObj.GetComponent<RosConnector>();
+                if (!planRobot) 
+                { 
+                    RosConnector = RosConnectorObj.AddComponent<RosConnector>();
+                    gameObject.AddComponent<PoseArrayPublisher>();
+                 }
+                RosConnector = RosConnectorObj.GetComponent<RosConnector>();
                 RosConnector.RosBridgeServerUrl = NetworkMasterIP;
                 switch (TypeOfEntity)
                 {
