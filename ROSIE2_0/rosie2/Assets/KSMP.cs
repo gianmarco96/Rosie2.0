@@ -58,7 +58,7 @@ public class KSMP : MonoBehaviour
 
 
                 RosConnector = RosConnectorObj.AddComponent<RosConnector>();
-                //gameObject.AddComponent<PoseArrayPublisher>();
+                gameObject.AddComponent<PoseArrayPublisher>();
                 //RosConnector = RosConnectorObj.GetComponent<RosConnector>();
                 RosConnector.RosBridgeServerUrl = NetworkMasterIP;
                 switch (TypeOfEntity)
