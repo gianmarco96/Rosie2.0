@@ -8,3 +8,8 @@ controller_list:
       - iiwa_joint_5
       - iiwa_joint_6
       - iiwa_joint_7
+  
+  # Added by Edwin - AMRC
+  - name: fake_gripper_controller
+    joints:
+      - robotiq_85_left_knuckle_joint
