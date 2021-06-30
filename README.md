@@ -1,4 +1,4 @@
-# Rosie2.0svdsfdsfds
+# Rosie2.0
 ## ROS installation
 Install and setup ROS (melodic recommended) on your Ubuntu Machine or VM. 
 <br />

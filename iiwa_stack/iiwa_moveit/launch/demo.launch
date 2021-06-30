@@ -19,7 +19,7 @@
     <remap from="robot_description" to="/$(arg robot_name)/robot_description" /> 
     <remap from="/move_group/fake_controller_joint_states" to="/$(arg robot_name)/move_group/fake_controller_joint_states" /> 
     <remap from="/get_planning_scene" to="/$(arg robot_name)/get_planning_scene" /> 
-
+    
     <!--Put in a namespace to allow many instances to run-->
     <group ns="$(arg robot_name)" >
         
