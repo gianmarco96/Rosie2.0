@@ -5,7 +5,8 @@
   <!--Import the lbr iiwa macro -->
   <xacro:include filename="$(find iiwa_description)/urdf/iiwa14.xacro"/>
   <!--Import base GP -->
-  <xacro:include filename="$(find iiwa_description)/urdf/rosie2base.xacro"/>
+  <!-- <xacro:include filename="$(find iiwa_description)/urdf/rosie2base.xacro"/> -->
+  <xacro:include filename="$(find iiwa_description)/urdf/rosie2siegmundbase.xacro"/>
   <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model.xacro"/>
   
   <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
