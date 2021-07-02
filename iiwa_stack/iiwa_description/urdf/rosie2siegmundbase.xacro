@@ -15,17 +15,17 @@
       name="base">
       <inertial>
         <origin
-          xyz="-7.6417091746513E-05 0.40001338309557 0.164858799827291"
+          xyz="1 0.5 -0.13"
           rpy="0 0 0" />
         <mass
-          value="53.6277106242961" />
+          value="330" />
         <inertia
-          ixx="6.3670548916442"
-          ixy="-1.9067207201396E-05"
-          ixz="3.77494926341754E-05"
-          iyy="4.38733657045515"
-          iyz="3.54070945707606E-05"
-          izz="5.36753756395971" />
+          ixx="139.861"
+          ixy="-155.063"
+          ixz="40.426"
+          iyy="488.660"
+          iyz="20.213"
+          izz="583.591" />
       </inertial>
       <visual>
         <origin
@@ -54,6 +54,20 @@
     
     <link
       name="plate">
+      <inertial>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <mass
+          value="0.5" />
+        <inertia
+          ixx="0.007"
+          ixy="0"
+          ixz="0"
+          iyy="0.014"
+          iyz="0"
+          izz="0.007" />
+      </inertial>
       <visual>
         <origin
           xyz="0 0 0"
