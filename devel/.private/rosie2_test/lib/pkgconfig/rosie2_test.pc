@@ -1,0 +1,8 @@
+prefix=/home/rosie2/Rosie2.0/devel/.private/rosie2_test
+
+Name: rosie2_test
+Description: Description of rosie2_test
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,1 @@
+/home/rosie2/Rosie2.0/devel/.private/robotiq_ethercat/share/robotiq_ethercat/cmake/robotiq_ethercatConfig.cmake

@@ -1,0 +1,6 @@
+devel_space: /home/rosie2/Rosie2.0/devel
+install: false
+install_space: /home/rosie2/Rosie2.0/install
+profile: default
+source_space: /home/rosie2/Rosie2.0/src
+workspace: /home/rosie2/Rosie2.0

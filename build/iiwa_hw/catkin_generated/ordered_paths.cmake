@@ -1,0 +1,1 @@
+set(ORDERED_PATHS "/home/rosie2/Rosie2.0/devel/.private/iiwa_ros/lib;/opt/ros/melodic/lib")

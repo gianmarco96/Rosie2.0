@@ -1,0 +1,1 @@
+/home/rosie2/Rosie2.0/devel/.private/robotiq_2f_gripper_action_server/share/robotiq_2f_gripper_action_server/cmake/robotiq_2f_gripper_action_serverConfig.cmake

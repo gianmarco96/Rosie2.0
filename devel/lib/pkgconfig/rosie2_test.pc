@@ -1,0 +1,1 @@
+/home/rosie2/Rosie2.0/devel/.private/rosie2_test/lib/pkgconfig/rosie2_test.pc

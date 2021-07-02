@@ -1,0 +1,6 @@
+iiwa_stack/rosie2_test
+/home/rosie2/Rosie2.0/devel/.private/rosie2_test/cmake.lock /home/rosie2/Rosie2.0/devel/./cmake.lock
+/home/rosie2/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node /home/rosie2/Rosie2.0/devel/lib/rosie2_test/rosie2_test_node
+/home/rosie2/Rosie2.0/devel/.private/rosie2_test/lib/pkgconfig/rosie2_test.pc /home/rosie2/Rosie2.0/devel/lib/pkgconfig/rosie2_test.pc
+/home/rosie2/Rosie2.0/devel/.private/rosie2_test/share/rosie2_test/cmake/rosie2_testConfig-version.cmake /home/rosie2/Rosie2.0/devel/share/rosie2_test/cmake/rosie2_testConfig-version.cmake
+/home/rosie2/Rosie2.0/devel/.private/rosie2_test/share/rosie2_test/cmake/rosie2_testConfig.cmake /home/rosie2/Rosie2.0/devel/share/rosie2_test/cmake/rosie2_testConfig.cmake

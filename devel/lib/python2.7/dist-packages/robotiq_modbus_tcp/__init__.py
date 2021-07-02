@@ -1,0 +1,1 @@
+/home/rosie2/Rosie2.0/devel/.private/robotiq_modbus_tcp/lib/python2.7/dist-packages/robotiq_modbus_tcp/__init__.py
