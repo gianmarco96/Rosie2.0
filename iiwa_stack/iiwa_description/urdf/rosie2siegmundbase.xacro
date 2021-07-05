@@ -30,7 +30,7 @@
       <visual>
         <origin
           xyz="0 0 0"
-          rpy="0 0 0" />
+          rpy="0 0 1.5708" />
         <geometry>
           <mesh
             filename="package://iiwa_description/meshes/base/visual/RAPID_SIegmundTable.stl" scale="0.01 0.01 0.01"/>
@@ -44,7 +44,7 @@
       <collision>
         <origin
           xyz="0 0 0"
-          rpy="0 0 0" />
+          rpy="0 0 1.5708" />
         <geometry>
           <mesh
             filename="package://iiwa_description/meshes/base/collision/RAPID_SIegmundTable.stl" scale="0.01 0.01 0.01"/>
@@ -97,13 +97,14 @@
     <joint name="plate_joint" type="fixed">
       <parent link="base"/>
       <child link="plate"/>
-      <origin xyz="0.375 0.475 0.010001" rpy="1.5708 0 0" />
+      <origin xyz="-0.475 0.375 0.010001" rpy="1.5708 0 0" />
     </joint>
-
+<!--  <origin xyz="0.375 0.475 0.010001" rpy="1.5708 0 0" />
+    </joint>-->
     <joint name="base_adjustment" type="fixed">
       <parent link="plate"/>
       <child link="base_link"/>
-      <origin xyz="0 0.01025 0" rpy="-1.5708 0 0"/>
+      <origin xyz="0 0.01025 0" rpy="-1.5708 1.5708 0"/>
     </joint>
     
     <link name="base_link"/>
