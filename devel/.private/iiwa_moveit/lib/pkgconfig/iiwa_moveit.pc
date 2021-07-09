@@ -1,4 +1,4 @@
-prefix=/home/rosie2/Rosie2.0/devel/.private/iiwa_moveit
+prefix=/home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_moveit
 
 Name: iiwa_moveit
 Description: Description of iiwa_moveit

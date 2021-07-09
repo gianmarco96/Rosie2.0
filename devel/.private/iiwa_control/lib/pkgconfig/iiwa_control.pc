@@ -1,4 +1,4 @@
-prefix=/home/rosie2/Rosie2.0/devel/.private/iiwa_control
+prefix=/home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_control
 
 Name: iiwa_control
 Description: Description of iiwa_control

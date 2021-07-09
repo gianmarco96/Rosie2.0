@@ -1,4 +1,4 @@
-Symlinking /home/rosie2/Rosie2.0/devel/lib/librobotiq_ethercat.so
-Symlinking /home/rosie2/Rosie2.0/devel/lib/pkgconfig/robotiq_ethercat.pc
-Symlinking /home/rosie2/Rosie2.0/devel/share/robotiq_ethercat/cmake/robotiq_ethercatConfig.cmake
-Symlinking /home/rosie2/Rosie2.0/devel/share/robotiq_ethercat/cmake/robotiq_ethercatConfig-version.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/robotiq_ethercat/cmake/robotiq_ethercatConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/robotiq_ethercat/cmake/robotiq_ethercatConfig-version.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/librobotiq_ethercat.so
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/pkgconfig/robotiq_ethercat.pc

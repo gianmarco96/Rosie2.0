@@ -1,4 +1,4 @@
-prefix=/home/rosie2/Rosie2.0/devel/.private/iiwa_gazebo
+prefix=/home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_gazebo
 
 Name: iiwa_gazebo
 Description: Description of iiwa_gazebo

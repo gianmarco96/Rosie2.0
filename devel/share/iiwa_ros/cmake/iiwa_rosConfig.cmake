@@ -1,1 +1,1 @@
-/home/rosie2/Rosie2.0/devel/.private/iiwa_ros/share/iiwa_ros/cmake/iiwa_rosConfig.cmake
+/home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_ros/share/iiwa_ros/cmake/iiwa_rosConfig.cmake

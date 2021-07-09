@@ -67,14 +67,14 @@ set(robotiq_ethercat_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(robotiq_ethercat_SOURCE_PREFIX /home/rosie2/Rosie2.0/src/robotiq/robotiq_ethercat)
-  set(robotiq_ethercat_DEVEL_PREFIX /home/rosie2/Rosie2.0/devel/.private/robotiq_ethercat)
+  set(robotiq_ethercat_SOURCE_PREFIX /home/uk-ras-mrc/Rosie2.0/src/robotiq/robotiq_ethercat)
+  set(robotiq_ethercat_DEVEL_PREFIX /home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_ethercat)
   set(robotiq_ethercat_INSTALL_PREFIX "")
   set(robotiq_ethercat_PREFIX ${robotiq_ethercat_DEVEL_PREFIX})
 else()
   set(robotiq_ethercat_SOURCE_PREFIX "")
   set(robotiq_ethercat_DEVEL_PREFIX "")
-  set(robotiq_ethercat_INSTALL_PREFIX /home/rosie2/Rosie2.0/install)
+  set(robotiq_ethercat_INSTALL_PREFIX /home/uk-ras-mrc/Rosie2.0/install)
   set(robotiq_ethercat_PREFIX ${robotiq_ethercat_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(robotiq_ethercat_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/rosie2/Rosie2.0/src/robotiq/robotiq_ethercat/include " STREQUAL " ")
+if(NOT "/home/uk-ras-mrc/Rosie2.0/src/robotiq/robotiq_ethercat/include " STREQUAL " ")
   set(robotiq_ethercat_INCLUDE_DIRS "")
-  set(_include_dirs "/home/rosie2/Rosie2.0/src/robotiq/robotiq_ethercat/include")
+  set(_include_dirs "/home/uk-ras-mrc/Rosie2.0/src/robotiq/robotiq_ethercat/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/rosie2/Rosie2.0/src/robotiq/robotiq_ethercat/include " STREQUAL " 
         message(FATAL_ERROR "Project 'robotiq_ethercat' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'robotiq_ethercat' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/rosie2/Rosie2.0/src/robotiq/robotiq_ethercat/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'robotiq_ethercat' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/uk-ras-mrc/Rosie2.0/src/robotiq/robotiq_ethercat/${idir}'.  ${_report}")
     endif()
     _list_append_unique(robotiq_ethercat_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/rosie2/Rosie2.0/devel/.private/robotiq_ethercat/lib;/home/rosie2/Rosie2.0/devel/lib;/home/rosie2/iiwa_stack_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_ethercat/lib;/home/uk-ras-mrc/Rosie2.0/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

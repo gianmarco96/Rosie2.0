@@ -1,3 +1,3 @@
-Symlinking /home/rosie2/Rosie2.0/devel/lib/pkgconfig/robotiq_2f_c2_gripper_visualization.pc
-Symlinking /home/rosie2/Rosie2.0/devel/share/robotiq_2f_c2_gripper_visualization/cmake/robotiq_2f_c2_gripper_visualizationConfig-version.cmake
-Symlinking /home/rosie2/Rosie2.0/devel/share/robotiq_2f_c2_gripper_visualization/cmake/robotiq_2f_c2_gripper_visualizationConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/robotiq_2f_c2_gripper_visualization/cmake/robotiq_2f_c2_gripper_visualizationConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/robotiq_2f_c2_gripper_visualization/cmake/robotiq_2f_c2_gripper_visualizationConfig-version.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/pkgconfig/robotiq_2f_c2_gripper_visualization.pc

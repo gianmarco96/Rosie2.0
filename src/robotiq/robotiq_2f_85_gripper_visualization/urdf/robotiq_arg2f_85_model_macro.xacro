@@ -10,6 +10,17 @@
       <axis xyz="0 0 0" />
     </joint>
 
+  <!-- link and joint to updated iiwa TCP (should be moved to separate file) -->
+  <link name="tcp"/>
+
+  <joint name="tcp_fixed_joint" type="fixed">
+      <origin xyz="0 0 0.130" rpy="0 0 0"/>
+      <parent link="robotiq_arg2f_base_link" />
+      <child link="tcp" />
+      <axis xyz="0 0 0" />
+    </joint>
+
+
   <xacro:macro name="outer_knuckle" params="prefix fingerprefix stroke">
     <link name="${prefix}${fingerprefix}_outer_knuckle">
       <!--<inertial>

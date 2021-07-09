@@ -5,9 +5,13 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
+        - /MotionPlanning1/Planning Request1
         - /MarkerArray1
-      Splitter Ratio: 0.7425600290298462
-    Tree Height: 262
+        - /TF1
+        - /TF1/Frames1
+        - /TF1/Tree1
+      Splitter Ratio: 0.574404776096344
+    Tree Height: 257
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -151,6 +155,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          plate:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           right_inner_finger:
             Alpha: 1
             Show Axes: false
@@ -181,6 +190,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          tcp:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           world:
             Alpha: 1
             Show Axes: false
@@ -205,7 +218,7 @@ Visualization Manager:
         Colliding Link Color: 255; 0; 0
         Goal State Alpha: 1
         Goal State Color: 250; 128; 0
-        Interactive Marker Size: 0
+        Interactive Marker Size: 0.30000001192092896
         Joint Violation Color: 255; 0; 255
         Planning Group: manipulator
         Query Goal State: true
@@ -308,6 +321,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          plate:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           right_inner_finger:
             Alpha: 1
             Show Axes: false
@@ -338,6 +356,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          tcp:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           world:
             Alpha: 1
             Show Axes: false
@@ -355,6 +377,99 @@ Visualization Manager:
         {}
       Queue Size: 100
       Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        base:
+          Value: false
+        base_link:
+          Value: false
+        iiwa_link_0:
+          Value: false
+        iiwa_link_1:
+          Value: false
+        iiwa_link_2:
+          Value: false
+        iiwa_link_3:
+          Value: false
+        iiwa_link_4:
+          Value: false
+        iiwa_link_5:
+          Value: false
+        iiwa_link_6:
+          Value: false
+        iiwa_link_7:
+          Value: false
+        iiwa_link_ee:
+          Value: false
+        left_inner_finger:
+          Value: true
+        left_inner_finger_pad:
+          Value: true
+        left_inner_knuckle:
+          Value: true
+        left_outer_finger:
+          Value: true
+        left_outer_knuckle:
+          Value: true
+        plate:
+          Value: true
+        right_inner_finger:
+          Value: true
+        right_inner_finger_pad:
+          Value: true
+        right_inner_knuckle:
+          Value: true
+        right_outer_finger:
+          Value: true
+        right_outer_knuckle:
+          Value: true
+        robotiq_arg2f_base_link:
+          Value: true
+        tcp:
+          Value: true
+        world:
+          Value: true
+      Marker Scale: 0.10000000149011612
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          base:
+            plate:
+              base_link:
+                iiwa_link_0:
+                  iiwa_link_1:
+                    iiwa_link_2:
+                      iiwa_link_3:
+                        iiwa_link_4:
+                          iiwa_link_5:
+                            iiwa_link_6:
+                              iiwa_link_7:
+                                iiwa_link_ee:
+                                  robotiq_arg2f_base_link:
+                                    left_inner_knuckle:
+                                      {}
+                                    left_outer_knuckle:
+                                      left_outer_finger:
+                                        left_inner_finger:
+                                          left_inner_finger_pad:
+                                            {}
+                                    right_inner_knuckle:
+                                      {}
+                                    right_outer_knuckle:
+                                      right_outer_finger:
+                                        right_inner_finger:
+                                          right_inner_finger_pad:
+                                            {}
+                                    tcp:
+                                      {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -371,41 +486,41 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 4.019690036773682
+      Distance: 3.8485281467437744
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.11356700211763382
-        Y: 0.10592000186443329
-        Z: 2.2351800055275817e-7
+        X: -1.9676921367645264
+        Y: 1.6119165420532227
+        Z: 9.38773723646591e-7
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7697970867156982
+      Pitch: 0.48979753255844116
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 5.414960861206055
+      Yaw: 5.859961986541748
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: false
+    collapsed: true
   Height: 895
   Help:
     collapsed: false
-  Hide Left Dock: false
+  Hide Left Dock: true
   Hide Right Dock: false
   MotionPlanning:
-    collapsed: false
+    collapsed: true
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002a200000325fc0200000007fb000000100044006900730070006c006100790073010000003d00000197000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e006701000002db0000017a0000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001da000001880000017d00ffffff000004950000032500000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002a200000325fc0200000007fb000000100044006900730070006c006100790073000000003d00000192000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e006701000002db0000017a0000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006700000001d50000018d0000017d00ffffff0000039f0000032500000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 1853
-  X: 67
+  Width: 927
+  X: 993
   Y: 27

@@ -1,4 +1,4 @@
-prefix=/home/rosie2/Rosie2.0/devel/.private/robotiq_2f_c2_gripper_visualization
+prefix=/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_c2_gripper_visualization
 
 Name: robotiq_2f_c2_gripper_visualization
 Description: Description of robotiq_2f_c2_gripper_visualization

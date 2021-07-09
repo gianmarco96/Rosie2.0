@@ -1,1 +1,1 @@
-/home/rosie2/Rosie2.0/devel/.private/robotiq_modbus_rtu/share/robotiq_modbus_rtu/cmake/robotiq_modbus_rtuConfig-version.cmake
+/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_modbus_rtu/share/robotiq_modbus_rtu/cmake/robotiq_modbus_rtuConfig-version.cmake

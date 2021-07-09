@@ -1,5 +1,5 @@
-Symlinking /home/rosie2/Rosie2.0/devel/lib/libiiwa_ros.so
-Symlinking /home/rosie2/Rosie2.0/devel/lib/iiwa_ros/iiwa_ros_test
-Symlinking /home/rosie2/Rosie2.0/devel/lib/pkgconfig/iiwa_ros.pc
-Symlinking /home/rosie2/Rosie2.0/devel/share/iiwa_ros/cmake/iiwa_rosConfig-version.cmake
-Symlinking /home/rosie2/Rosie2.0/devel/share/iiwa_ros/cmake/iiwa_rosConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/iiwa_ros/cmake/iiwa_rosConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/iiwa_ros/cmake/iiwa_rosConfig-version.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/libiiwa_ros.so
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/pkgconfig/iiwa_ros.pc
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/iiwa_ros/iiwa_ros_test

@@ -1,1 +1,1 @@
-/home/rosie2/Rosie2.0/devel/.private/robotiq_ft_sensor/share/roseus/ros/robotiq_ft_sensor/msg/ft_sensor.l
+/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_ft_sensor/share/roseus/ros/robotiq_ft_sensor/msg/ft_sensor.l

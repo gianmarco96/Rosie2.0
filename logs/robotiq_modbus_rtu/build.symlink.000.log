@@ -1,4 +1,4 @@
-Symlinking /home/rosie2/Rosie2.0/devel/lib/python2.7/dist-packages/robotiq_modbus_rtu/__init__.py
-Symlinking /home/rosie2/Rosie2.0/devel/lib/pkgconfig/robotiq_modbus_rtu.pc
-Symlinking /home/rosie2/Rosie2.0/devel/share/robotiq_modbus_rtu/cmake/robotiq_modbus_rtuConfig-version.cmake
-Symlinking /home/rosie2/Rosie2.0/devel/share/robotiq_modbus_rtu/cmake/robotiq_modbus_rtuConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/robotiq_modbus_rtu/cmake/robotiq_modbus_rtuConfig-version.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/robotiq_modbus_rtu/cmake/robotiq_modbus_rtuConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/pkgconfig/robotiq_modbus_rtu.pc
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/python2.7/dist-packages/robotiq_modbus_rtu/__init__.py

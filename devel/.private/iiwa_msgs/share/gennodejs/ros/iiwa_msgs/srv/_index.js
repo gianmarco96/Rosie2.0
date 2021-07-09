@@ -1,24 +1,24 @@
 
 "use strict";
 
-let SetEndpointFrame = require('./SetEndpointFrame.js')
-let SetSmartServoLinSpeedLimits = require('./SetSmartServoLinSpeedLimits.js')
 let SetSmartServoJointSpeedLimits = require('./SetSmartServoJointSpeedLimits.js')
-let SetPTPCartesianSpeedLimits = require('./SetPTPCartesianSpeedLimits.js')
-let SetSpeedOverride = require('./SetSpeedOverride.js')
+let SetPTPJointSpeedLimits = require('./SetPTPJointSpeedLimits.js')
+let SetEndpointFrame = require('./SetEndpointFrame.js')
 let TimeToDestination = require('./TimeToDestination.js')
 let ConfigureControlMode = require('./ConfigureControlMode.js')
+let SetPTPCartesianSpeedLimits = require('./SetPTPCartesianSpeedLimits.js')
 let SetWorkpiece = require('./SetWorkpiece.js')
-let SetPTPJointSpeedLimits = require('./SetPTPJointSpeedLimits.js')
+let SetSpeedOverride = require('./SetSpeedOverride.js')
+let SetSmartServoLinSpeedLimits = require('./SetSmartServoLinSpeedLimits.js')
 
 module.exports = {
-  SetEndpointFrame: SetEndpointFrame,
-  SetSmartServoLinSpeedLimits: SetSmartServoLinSpeedLimits,
   SetSmartServoJointSpeedLimits: SetSmartServoJointSpeedLimits,
-  SetPTPCartesianSpeedLimits: SetPTPCartesianSpeedLimits,
-  SetSpeedOverride: SetSpeedOverride,
+  SetPTPJointSpeedLimits: SetPTPJointSpeedLimits,
+  SetEndpointFrame: SetEndpointFrame,
   TimeToDestination: TimeToDestination,
   ConfigureControlMode: ConfigureControlMode,
+  SetPTPCartesianSpeedLimits: SetPTPCartesianSpeedLimits,
   SetWorkpiece: SetWorkpiece,
-  SetPTPJointSpeedLimits: SetPTPJointSpeedLimits,
+  SetSpeedOverride: SetSpeedOverride,
+  SetSmartServoLinSpeedLimits: SetSmartServoLinSpeedLimits,
 };

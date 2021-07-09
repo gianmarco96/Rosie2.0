@@ -1,4 +1,4 @@
-prefix=/home/rosie2/Rosie2.0/devel/.private/iiwa_description
+prefix=/home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_description
 
 Name: iiwa_description
 Description: Description of iiwa_description

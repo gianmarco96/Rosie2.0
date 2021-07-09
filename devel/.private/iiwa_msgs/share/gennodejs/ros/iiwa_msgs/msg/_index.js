@@ -1,94 +1,94 @@
 
 "use strict";
 
-let SinePatternControlMode = require('./SinePatternControlMode.js');
-let CartesianVelocity = require('./CartesianVelocity.js');
 let CartesianPlane = require('./CartesianPlane.js');
-let CartesianPose = require('./CartesianPose.js');
-let ControlMode = require('./ControlMode.js');
-let JointQuantity = require('./JointQuantity.js');
+let SinePatternControlMode = require('./SinePatternControlMode.js');
 let JointPosition = require('./JointPosition.js');
-let CartesianEulerPose = require('./CartesianEulerPose.js');
-let DOF = require('./DOF.js');
-let CartesianControlModeLimits = require('./CartesianControlModeLimits.js');
-let JointTorque = require('./JointTorque.js');
-let Spline = require('./Spline.js');
-let CartesianQuantity = require('./CartesianQuantity.js');
 let JointVelocity = require('./JointVelocity.js');
-let JointDamping = require('./JointDamping.js');
 let RedundancyInformation = require('./RedundancyInformation.js');
-let JointStiffness = require('./JointStiffness.js');
-let JointImpedanceControlMode = require('./JointImpedanceControlMode.js');
+let CartesianVelocity = require('./CartesianVelocity.js');
+let ControlMode = require('./ControlMode.js');
+let JointDamping = require('./JointDamping.js');
+let DOF = require('./DOF.js');
+let CartesianEulerPose = require('./CartesianEulerPose.js');
+let CartesianPose = require('./CartesianPose.js');
 let JointPositionVelocity = require('./JointPositionVelocity.js');
-let CartesianImpedanceControlMode = require('./CartesianImpedanceControlMode.js');
 let DesiredForceControlMode = require('./DesiredForceControlMode.js');
+let CartesianQuantity = require('./CartesianQuantity.js');
+let CartesianControlModeLimits = require('./CartesianControlModeLimits.js');
+let CartesianImpedanceControlMode = require('./CartesianImpedanceControlMode.js');
 let CartesianWrench = require('./CartesianWrench.js');
+let JointImpedanceControlMode = require('./JointImpedanceControlMode.js');
+let JointQuantity = require('./JointQuantity.js');
+let Spline = require('./Spline.js');
+let JointStiffness = require('./JointStiffness.js');
 let SplineSegment = require('./SplineSegment.js');
-let MoveAlongSplineActionFeedback = require('./MoveAlongSplineActionFeedback.js');
-let MoveToCartesianPoseResult = require('./MoveToCartesianPoseResult.js');
-let MoveToJointPositionAction = require('./MoveToJointPositionAction.js');
-let MoveToCartesianPoseActionGoal = require('./MoveToCartesianPoseActionGoal.js');
-let MoveToCartesianPoseActionFeedback = require('./MoveToCartesianPoseActionFeedback.js');
-let MoveAlongSplineGoal = require('./MoveAlongSplineGoal.js');
-let MoveToJointPositionFeedback = require('./MoveToJointPositionFeedback.js');
-let MoveToJointPositionGoal = require('./MoveToJointPositionGoal.js');
-let MoveAlongSplineAction = require('./MoveAlongSplineAction.js');
-let MoveToCartesianPoseAction = require('./MoveToCartesianPoseAction.js');
-let MoveToJointPositionActionFeedback = require('./MoveToJointPositionActionFeedback.js');
-let MoveAlongSplineResult = require('./MoveAlongSplineResult.js');
+let JointTorque = require('./JointTorque.js');
 let MoveToCartesianPoseActionResult = require('./MoveToCartesianPoseActionResult.js');
-let MoveToJointPositionActionGoal = require('./MoveToJointPositionActionGoal.js');
-let MoveToCartesianPoseGoal = require('./MoveToCartesianPoseGoal.js');
-let MoveToJointPositionActionResult = require('./MoveToJointPositionActionResult.js');
+let MoveToCartesianPoseFeedback = require('./MoveToCartesianPoseFeedback.js');
+let MoveAlongSplineFeedback = require('./MoveAlongSplineFeedback.js');
+let MoveToCartesianPoseActionFeedback = require('./MoveToCartesianPoseActionFeedback.js');
 let MoveAlongSplineActionResult = require('./MoveAlongSplineActionResult.js');
 let MoveToJointPositionResult = require('./MoveToJointPositionResult.js');
-let MoveAlongSplineFeedback = require('./MoveAlongSplineFeedback.js');
+let MoveAlongSplineResult = require('./MoveAlongSplineResult.js');
 let MoveAlongSplineActionGoal = require('./MoveAlongSplineActionGoal.js');
-let MoveToCartesianPoseFeedback = require('./MoveToCartesianPoseFeedback.js');
+let MoveToJointPositionActionResult = require('./MoveToJointPositionActionResult.js');
+let MoveToJointPositionActionGoal = require('./MoveToJointPositionActionGoal.js');
+let MoveAlongSplineActionFeedback = require('./MoveAlongSplineActionFeedback.js');
+let MoveToCartesianPoseAction = require('./MoveToCartesianPoseAction.js');
+let MoveToCartesianPoseActionGoal = require('./MoveToCartesianPoseActionGoal.js');
+let MoveToCartesianPoseResult = require('./MoveToCartesianPoseResult.js');
+let MoveToJointPositionAction = require('./MoveToJointPositionAction.js');
+let MoveToCartesianPoseGoal = require('./MoveToCartesianPoseGoal.js');
+let MoveToJointPositionGoal = require('./MoveToJointPositionGoal.js');
+let MoveAlongSplineAction = require('./MoveAlongSplineAction.js');
+let MoveToJointPositionActionFeedback = require('./MoveToJointPositionActionFeedback.js');
+let MoveToJointPositionFeedback = require('./MoveToJointPositionFeedback.js');
+let MoveAlongSplineGoal = require('./MoveAlongSplineGoal.js');
 
 module.exports = {
-  SinePatternControlMode: SinePatternControlMode,
-  CartesianVelocity: CartesianVelocity,
   CartesianPlane: CartesianPlane,
-  CartesianPose: CartesianPose,
-  ControlMode: ControlMode,
-  JointQuantity: JointQuantity,
+  SinePatternControlMode: SinePatternControlMode,
   JointPosition: JointPosition,
-  CartesianEulerPose: CartesianEulerPose,
-  DOF: DOF,
-  CartesianControlModeLimits: CartesianControlModeLimits,
-  JointTorque: JointTorque,
-  Spline: Spline,
-  CartesianQuantity: CartesianQuantity,
   JointVelocity: JointVelocity,
-  JointDamping: JointDamping,
   RedundancyInformation: RedundancyInformation,
-  JointStiffness: JointStiffness,
-  JointImpedanceControlMode: JointImpedanceControlMode,
+  CartesianVelocity: CartesianVelocity,
+  ControlMode: ControlMode,
+  JointDamping: JointDamping,
+  DOF: DOF,
+  CartesianEulerPose: CartesianEulerPose,
+  CartesianPose: CartesianPose,
   JointPositionVelocity: JointPositionVelocity,
-  CartesianImpedanceControlMode: CartesianImpedanceControlMode,
   DesiredForceControlMode: DesiredForceControlMode,
+  CartesianQuantity: CartesianQuantity,
+  CartesianControlModeLimits: CartesianControlModeLimits,
+  CartesianImpedanceControlMode: CartesianImpedanceControlMode,
   CartesianWrench: CartesianWrench,
+  JointImpedanceControlMode: JointImpedanceControlMode,
+  JointQuantity: JointQuantity,
+  Spline: Spline,
+  JointStiffness: JointStiffness,
   SplineSegment: SplineSegment,
-  MoveAlongSplineActionFeedback: MoveAlongSplineActionFeedback,
-  MoveToCartesianPoseResult: MoveToCartesianPoseResult,
-  MoveToJointPositionAction: MoveToJointPositionAction,
-  MoveToCartesianPoseActionGoal: MoveToCartesianPoseActionGoal,
-  MoveToCartesianPoseActionFeedback: MoveToCartesianPoseActionFeedback,
-  MoveAlongSplineGoal: MoveAlongSplineGoal,
-  MoveToJointPositionFeedback: MoveToJointPositionFeedback,
-  MoveToJointPositionGoal: MoveToJointPositionGoal,
-  MoveAlongSplineAction: MoveAlongSplineAction,
-  MoveToCartesianPoseAction: MoveToCartesianPoseAction,
-  MoveToJointPositionActionFeedback: MoveToJointPositionActionFeedback,
-  MoveAlongSplineResult: MoveAlongSplineResult,
+  JointTorque: JointTorque,
   MoveToCartesianPoseActionResult: MoveToCartesianPoseActionResult,
-  MoveToJointPositionActionGoal: MoveToJointPositionActionGoal,
-  MoveToCartesianPoseGoal: MoveToCartesianPoseGoal,
-  MoveToJointPositionActionResult: MoveToJointPositionActionResult,
+  MoveToCartesianPoseFeedback: MoveToCartesianPoseFeedback,
+  MoveAlongSplineFeedback: MoveAlongSplineFeedback,
+  MoveToCartesianPoseActionFeedback: MoveToCartesianPoseActionFeedback,
   MoveAlongSplineActionResult: MoveAlongSplineActionResult,
   MoveToJointPositionResult: MoveToJointPositionResult,
-  MoveAlongSplineFeedback: MoveAlongSplineFeedback,
+  MoveAlongSplineResult: MoveAlongSplineResult,
   MoveAlongSplineActionGoal: MoveAlongSplineActionGoal,
-  MoveToCartesianPoseFeedback: MoveToCartesianPoseFeedback,
+  MoveToJointPositionActionResult: MoveToJointPositionActionResult,
+  MoveToJointPositionActionGoal: MoveToJointPositionActionGoal,
+  MoveAlongSplineActionFeedback: MoveAlongSplineActionFeedback,
+  MoveToCartesianPoseAction: MoveToCartesianPoseAction,
+  MoveToCartesianPoseActionGoal: MoveToCartesianPoseActionGoal,
+  MoveToCartesianPoseResult: MoveToCartesianPoseResult,
+  MoveToJointPositionAction: MoveToJointPositionAction,
+  MoveToCartesianPoseGoal: MoveToCartesianPoseGoal,
+  MoveToJointPositionGoal: MoveToJointPositionGoal,
+  MoveAlongSplineAction: MoveAlongSplineAction,
+  MoveToJointPositionActionFeedback: MoveToJointPositionActionFeedback,
+  MoveToJointPositionFeedback: MoveToJointPositionFeedback,
+  MoveAlongSplineGoal: MoveAlongSplineGoal,
 };

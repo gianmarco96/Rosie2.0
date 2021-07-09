@@ -1,1 +1,1 @@
-/home/rosie2/Rosie2.0/devel/.private/rosie2_test/share/rosie2_test/cmake/rosie2_testConfig.cmake
+/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/share/rosie2_test/cmake/rosie2_testConfig.cmake

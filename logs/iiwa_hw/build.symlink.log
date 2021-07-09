@@ -1,5 +1,5 @@
-Symlinking /home/rosie2/Rosie2.0/devel/lib/libiiwa_hw.so
-Symlinking /home/rosie2/Rosie2.0/devel/lib/iiwa_hw/iiwa_hw-bin
-Symlinking /home/rosie2/Rosie2.0/devel/lib/pkgconfig/iiwa_hw.pc
-Symlinking /home/rosie2/Rosie2.0/devel/share/iiwa_hw/cmake/iiwa_hwConfig-version.cmake
-Symlinking /home/rosie2/Rosie2.0/devel/share/iiwa_hw/cmake/iiwa_hwConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/iiwa_hw/cmake/iiwa_hwConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/iiwa_hw/cmake/iiwa_hwConfig-version.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/libiiwa_hw.so
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/pkgconfig/iiwa_hw.pc
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/iiwa_hw/iiwa_hw-bin

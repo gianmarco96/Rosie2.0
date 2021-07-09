@@ -1,1 +1,1 @@
-/home/rosie2/Rosie2.0/devel/.private/robotiq_modbus_rtu/lib/python2.7/dist-packages/robotiq_modbus_rtu/__init__.py
+/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_modbus_rtu/lib/python2.7/dist-packages/robotiq_modbus_rtu/__init__.py
