@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-    <arg name="robot_name" default="iiwa"/>
-
-    <node pkg="rosie2_test" type="rosie2_test_node" name="rosie2_test_node" ns="$(arg robot_name)" output="screen" >
-    </node>
-</launch>

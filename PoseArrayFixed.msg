@@ -1,3 +1,0 @@
-Header header
-
-Pose[] poses
