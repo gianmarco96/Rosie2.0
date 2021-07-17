@@ -17,6 +17,7 @@
 
 bool new_gl_rcvd = false;
 std::vector<geometry_msgs::Pose> pose_goals; 
+ros::Publisher traj_feedback;
 
 void goal_list_subscriber_callback(const geometry_msgs::PoseArray::ConstPtr& msg)
 {
@@ -37,12 +38,45 @@ void excecute_trajectory(moveit::planning_interface::MoveGroupInterface& move_gr
   const double jump_threshold = 0.0;
   const double eef_step = 0.01;
   double fraction = move_group.computeCartesianPath(pose_goals, eef_step, jump_threshold, trajectory);
-  ROS_INFO("Received trajectory from Unity (Cartesian path) (%.2f%% acheived)", fraction * 100.0);
+  std_msgs::String feedback_str;
+  feedback_str.data = "Received trajectory from Unity (Cartesian path) ("+ std::to_string(fraction * 100.0) + "% acheived)" ;
+  traj_feedback.publish(feedback_str);
 
   my_plan.trajectory_= trajectory;
   move_group.execute(my_plan);
     
 }
+
+bool new_pl_rcvd = false;
+std::vector<geometry_msgs::Pose> plan_goals; 
+
+void plan_list_subscriber_callback(const geometry_msgs::PoseArray::ConstPtr& msg)
+{
+  plan_goals.clear();
+  for(int i=0;i<msg->poses.size();i++){
+    plan_goals.push_back(msg->poses[i]);
+    std::cout << msg->poses[i];
+  }
+  new_pl_rcvd = true;
+  
+}
+
+void plan_trajectory(moveit::planning_interface::MoveGroupInterface& move_group, moveit::planning_interface::MoveGroupInterface::Plan& my_plan)
+{
+
+  move_group.setMaxVelocityScalingFactor(0.1);
+
+  moveit_msgs::RobotTrajectory trajectory;
+  const double jump_threshold = 0.0;
+  const double eef_step = 0.01;
+  double fraction = move_group.computeCartesianPath(plan_goals, eef_step, jump_threshold, trajectory);
+  ROS_INFO("Received trajectory from Unity (Cartesian path) (%.2f%% acheived)", fraction * 100.0);
+
+  my_plan.trajectory_= trajectory;
+  move_group.plan(my_plan);
+    
+}
+
 
 
 int main(int argc, char **argv)
@@ -52,6 +86,8 @@ int main(int argc, char **argv)
   ros::NodeHandle node_handle;
 
   ros::Subscriber sub_goal_list = node_handle.subscribe("/goal_poses", 1000, goal_list_subscriber_callback);
+  ros::Subscriber sub_plan_list = node_handle.subscribe("/plan_poses", 1000, plan_list_subscriber_callback);
+  traj_feedback = node_handle.advertise<std_msgs::String>("trajectory_feedback", 1000);
 
   ros::AsyncSpinner spinner(1);
   spinner.start(); 
@@ -77,6 +113,11 @@ int main(int argc, char **argv)
        new_gl_rcvd = false;
        excecute_trajectory(move_group, my_plan);
      }
+     if(new_pl_rcvd)
+     {
+       new_pl_rcvd = false;
+       plan_trajectory(move_group, my_plan);
+     }
 
       
   }
@@ -84,4 +125,3 @@ int main(int argc, char **argv)
   
   return 0;
 }
-

@@ -1,0 +1,21 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:22:1:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kvoid[m[K’
+ [01;31m[Kvoid[m[K goal_list_subscriber_callback(const geometry_msgs::PoseArray::ConstPtr& msg)
+ [01;31m[K^~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:[m[K In function ‘[01m[Kvoid excecute_trajectory(moveit::planning_interface::MoveGroupInterface&, moveit::planning_interface::MoveGroupInterface::Plan&)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:43:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ktraj_feedback[m[K’ was not declared in this scope
+   [01;31m[Ktraj_feedback[m[K.pub(feedback_str);
+   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:88:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal_list_subscriber_callback[m[K’ was not declared in this scope
+   ros::Subscriber sub_goal_list = node_handle.subscribe("/goal_poses", 1000, [01;31m[Kgoal_list_subscriber_callback[m[K);
+                                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:88:78:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kplan_list_subscriber_callback[m[K’
+   ros::Subscriber sub_goal_list = node_handle.subscribe("/goal_poses", 1000, [01;36m[Kgoal_list_subscriber_callback[m[K);
+                                                                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+                                                                              [32m[Kplan_list_subscriber_callback[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:90:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ktraj_feedback[m[K’ was not declared in this scope
+   [01;31m[Ktraj_feedback[m[K = node_handle.advertise<std_msgs::String>("trajectory_feedback", 1000);
+   [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/rosie2_test_node.dir/src/readState.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_node.dir/all] Error 2
+make: *** [all] Error 2

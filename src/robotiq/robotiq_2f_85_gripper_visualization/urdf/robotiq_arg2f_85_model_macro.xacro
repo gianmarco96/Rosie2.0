@@ -7,7 +7,7 @@
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <parent link="iiwa_link_ee" />
       <child link="robotiq_arg2f_base_link" />
-      <axis xyz="0 0 0" />
+      <!-- <axis xyz="0 0 0" /> -->
     </joint>
 
   <!-- link and joint to updated iiwa TCP (should be moved to separate file) -->
@@ -17,7 +17,7 @@
       <origin xyz="0 0 0.130" rpy="0 0 0"/>
       <parent link="robotiq_arg2f_base_link" />
       <child link="tcp" />
-      <axis xyz="0 0 0" />
+      <!-- <axis xyz="0 0 0" /> -->
     </joint>
 
 
