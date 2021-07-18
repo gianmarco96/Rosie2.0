@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6A97B81C-A1E3-5F5B-1C56-556BDBCF3E38}</ProjectGuid>
+    <ProjectGuid>{10F947EB-3659-A4F6-293D-529DEF2E4BCF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -322,49 +322,49 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="MessageGeneration">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/MessageGeneration.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/MessageGeneration.dll</HintPath>
     </Reference>
     <Reference Include="RosBridgeClient">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/RosBridgeClient.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/RosBridgeClient.dll</HintPath>
     </Reference>
     <Reference Include="Urdf">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/Urdf.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/Urdf.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json.Bson">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/External/Newtonsoft.Json.Bson.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/External/Newtonsoft.Json.Bson.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/External/websocket-sharp.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/External/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/Microsoft/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/Microsoft/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/Microsoft/System.Buffers.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/Microsoft/System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/Microsoft/System.Memory.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/Microsoft/System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/Microsoft/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/Microsoft/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encodings.Web">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/Microsoft/System.Text.Encodings.Web.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/Microsoft/System.Text.Encodings.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Json">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/Microsoft/System.Text.Json.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/Microsoft/System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Channels">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/Microsoft/System.Threading.Channels.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/Microsoft/System.Threading.Channels.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Assets/RosSharp/Plugins/Microsoft/System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Assets/RosSharp/Plugins/Microsoft/System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Users/me1gmp/AppData/Local/Programs/Microsoft VS Code/2019.4.13f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -721,42 +721,42 @@
       <HintPath>C:/Users/me1gmp/AppData/Local/Programs/Microsoft VS Code/2019.4.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/me1gmp/Desktop/Unity-Challenge-main/rosie3/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/me1gmp/Documents/Rosie backup docs/Rosie2.0/UK-RAS-Challenge-Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{DABE76BA-AA93-B220-3CA3-CFC9CE117C1D}</Project>
+      <Project>{68FCF0F6-D32E-DE5B-3A15-D53DD9EBE7DE}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>

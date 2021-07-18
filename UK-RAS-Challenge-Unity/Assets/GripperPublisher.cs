@@ -26,7 +26,7 @@ namespace RosSharp.RosBridgeClient
         private void InitializeMessage()
         {
             message = new MessageTypes.Robotiq2fGripperControl.Robotiq2FGripper_robot_output(1, 1, 0, 0, 255, 150);
-            Publish(message);
+            //Publish(message);
         }
 
         public void UpdateMessage()

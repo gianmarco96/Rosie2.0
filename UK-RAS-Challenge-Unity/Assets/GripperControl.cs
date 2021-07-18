@@ -8,6 +8,7 @@ public class GripperControl : MonoBehaviour
     private GameObject openGripperButton;
     private GameObject closeGripperButton;
     private GameObject squeezeBottleButton;
+    private RosSharp.RosBridgeClient.GripperControlSub gripperControlSub;
     public List<GameObject> spills;
     public bool gripperClosed = false;
     public GameObject robotGripper;
@@ -26,7 +27,7 @@ public class GripperControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gripperControlSub = gameObject.GetComponent<RosSharp.RosBridgeClient.GripperControlSub>();
     }
 
     // Update is called once per frame
@@ -93,8 +94,8 @@ public class GripperControl : MonoBehaviour
     {
         Debug.Log("Opening gripper");
         gripperPublisher.rpr = 0;
-        gripperPublisher.UpdateMessage();
-        //EmptyEventSystem();
+        //gripperPublisher.UpdateMessage();
+        EmptyEventSystem();
         gripperClosed = false;
         objectPicked = false;
 
@@ -105,6 +106,7 @@ public class GripperControl : MonoBehaviour
             pickedObject.GetComponent<Collider>().attachedRigidbody.isKinematic = false;
             pickedObject = null;
         }
+        gripperControlSub.isMessageReceived = false;
         
     }
 
@@ -112,8 +114,8 @@ public class GripperControl : MonoBehaviour
     {
         Debug.Log("Closing gripper");
         gripperPublisher.rpr = 150;
-        gripperPublisher.UpdateMessage();
-        //EmptyEventSystem();
+        //gripperPublisher.UpdateMessage();
+        EmptyEventSystem();
         gripperClosed = true;
 
         if ((Vector3.Distance(robotGripper.transform.position, gelBottle.transform.position) < 0.1f) && !objectPicked)
@@ -126,12 +128,13 @@ public class GripperControl : MonoBehaviour
             pickedObject = sponge;
             AttachObject();
         }
+        gripperControlSub.isMessageReceived = false;
     }
 
     public void SqueezeBottle()
     {
-        gripperPublisher.rpr = 150;
-        gripperPublisher.UpdateMessage();
+        //gripperPublisher.rpr = 160;
+        //gripperPublisher.UpdateMessage();
         gel.Play();
         if (gripperClosed && (pickedObject == gelBottle))
         {
@@ -139,6 +142,7 @@ public class GripperControl : MonoBehaviour
 
 
         }
+        gripperControlSub.isMessageReceived = false;
     }
 
     private void AttachObject()
@@ -162,11 +166,11 @@ public class GripperControl : MonoBehaviour
         return gripperClosed;
     }
 
-    //private void EmptyEventSystem()
-    //{
-    //    GameObject eventSystemObject = GameObject.Find("EventSystem");
-    //    eventSystemObject.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
-    //}
+    private void EmptyEventSystem()
+    {
+        GameObject eventSystemObject = GameObject.Find("EventSystem");
+        eventSystemObject.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
+    }
 
     IEnumerator GelRoutine()
     {

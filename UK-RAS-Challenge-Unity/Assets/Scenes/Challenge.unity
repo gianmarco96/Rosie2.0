@@ -9563,6 +9563,7 @@ GameObject:
   - component: {fileID: 1367208877}
   - component: {fileID: 1367208878}
   - component: {fileID: 1367208879}
+  - component: {fileID: 1367208880}
   m_Layer: 0
   m_Name: iiwa14
   m_TagString: Untagged
@@ -9627,7 +9628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c40b69421b8d42548a962fcf02f77bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NetworkMasterIP: ws://192.168.0.92:9090
+  NetworkMasterIP: ws://192.168.0.97:9090
   TypeOfKSMP: 0
   TypeOfEntity: 0
   planRobot: 0
@@ -9686,6 +9687,21 @@ MonoBehaviour:
   pickedObject: {fileID: 0}
   bottleCap: {fileID: 212876624}
   gel: {fileID: 1382167806}
+--- !u!114 &1367208880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367208872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4639f8f6f4838b048818b38b4b8f7408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: 
+  TimeStep: 0
+  isMessageReceived: 0
 --- !u!1 &1374383745
 GameObject:
   m_ObjectHideFlags: 0
@@ -9764,7 +9780,7 @@ MonoBehaviour:
   SecondsTimeout: 40
   Serializer: 1
   protocol: 0
-  RosBridgeServerUrl: ws://192.168.0.96:9090
+  RosBridgeServerUrl: ws://192.168.0.97:9090
 --- !u!4 &1376646314
 Transform:
   m_ObjectHideFlags: 0
