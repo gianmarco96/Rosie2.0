@@ -3,6 +3,6 @@ prefix=/home/uk-ras-mrc/Rosie2.0/install
 Name: rosie2_test
 Description: Description of rosie2_test
 Version: 0.0.0
-Cflags: 
+Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib 
 Requires: 

@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/robotiq_2f_gripper_control_generate_messages_eus"
   "/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/share/roseus/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_input.l"
   "/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/share/roseus/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_output.l"
+  "/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/share/roseus/ros/robotiq_2f_gripper_control/srv/UnityGripper.l"
   "/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/share/roseus/ros/robotiq_2f_gripper_control/manifest.l"
 )
 

@@ -1,0 +1,30 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:26:10:[m[K [01;31m[Kerror: [m[K‘[01m[Ksleep[m[K’ is not a member of ‘[01m[Kros[m[K’
+     ros::[01;31m[Ksleep[m[K(ros::Duration(1));
+          [01;31m[K^~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:26:10:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/boost/config/stdlib/libstdcpp3.hpp:78:0[m[K,
+                 from [01m[K/usr/include/boost/config.hpp:48[m[K,
+                 from [01m[K/usr/include/boost/math/tools/config.hpp:13[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:13[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:1[m[K:
+[01m[K/usr/include/unistd.h:447:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksleep[m[K’
+ extern unsigned int [01;36m[Ksleep[m[K (unsigned int __seconds);
+                     [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/thread/thread_only.hpp:22:0[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:13[m[K,
+                 from [01m[K/opt/ros/melodic/include/actionlib/managed_list.h:39[m[K,
+                 from [01m[K/opt/ros/melodic/include/actionlib/client/client_helpers.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/actionlib/client/action_client.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/actionlib/client/simple_action_client.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:54[m[K,
+                 from [01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:2[m[K:
+[01m[K/usr/include/boost/thread/detail/thread.hpp:629:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::this_thread::sleep[m[K’
+         inline BOOST_SYMBOL_VISIBLE void [01;36m[Ksleep[m[K(xtime const& abs_time)
+                                          [01;36m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/rosie2_test_srv_node.dir/src/service.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_srv_node.dir/all] Error 2
+make: *** [all] Error 2

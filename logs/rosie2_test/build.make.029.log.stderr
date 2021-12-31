@@ -1,0 +1,11 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:142:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ was not declared in this scope
+   ros::ServiceServer service = [01;31m[Kn[m[K.advertiseService("planG", planna);
+                                [01;31m[K^[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:142:32:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kyn[m[K’
+   ros::ServiceServer service = [01;36m[Kn[m[K.advertiseService("planG", planna);
+                                [01;36m[K^[m[K
+                                [32m[Kyn[m[K
+make[2]: *** [CMakeFiles/rosie2_test_node.dir/src/readState.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_node.dir/all] Error 2
+make: *** [all] Error 2

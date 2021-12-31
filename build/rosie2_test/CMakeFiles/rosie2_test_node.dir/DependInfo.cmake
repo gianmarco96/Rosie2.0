@@ -17,6 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/include"
   "/home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_msgs/include"
   "/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/iiwa_ros/include"
   "/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/iiwa_hw/include"

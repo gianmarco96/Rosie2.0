@@ -1,0 +1,9 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:6:10:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K([m[K’ token
+ ros::init[01;31m[K([m[K"plan_motion_node");
+          [01;31m[K^[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:9:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kduration[m[K’ does not name a type
+     [01;31m[Kduration[m[K.sleep();
+     [01;31m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/rosie2_test_srv_node.dir/src/service.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_srv_node.dir/all] Error 2
+make: *** [all] Error 2

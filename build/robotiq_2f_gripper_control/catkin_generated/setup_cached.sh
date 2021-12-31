@@ -9,6 +9,7 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/uk-ras-mrc/Rosie2.0/build/robotiq_2f_gripper_control'
 export PYTHONPATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"

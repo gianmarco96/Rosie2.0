@@ -1,0 +1,4 @@
+The dependencies of the message/service 'rosie2_test/PlanSrv' have changed. Please rerun cmake.
+make[2]: *** [CMakeFiles/_rosie2_test_generate_messages_check_deps_PlanSrv] Error 1
+make[1]: *** [CMakeFiles/_rosie2_test_generate_messages_check_deps_PlanSrv.dir/all] Error 2
+make: *** [all] Error 2

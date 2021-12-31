@@ -5,6 +5,7 @@
 #include <string>
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
+#include "rosie2_test/PlanSrv.h"
 
 #include <moveit_msgs/DisplayRobotState.h>
 
@@ -18,6 +19,10 @@
 bool new_gl_rcvd = false;
 std::vector<geometry_msgs::Pose> pose_goals; 
 ros::Publisher traj_feedback;
+
+
+
+
 
 void goal_list_subscriber_callback(const geometry_msgs::PoseArray::ConstPtr& msg)
 {
@@ -46,6 +51,7 @@ void excecute_trajectory(moveit::planning_interface::MoveGroupInterface& move_gr
   move_group.execute(my_plan);
     
 }
+
 
 bool new_pl_rcvd = false;
 std::vector<geometry_msgs::Pose> plan_goals; 
@@ -106,8 +112,13 @@ int main(int argc, char **argv)
   
 
 
+  
+
+  rosie2_test::PlanSrv srv;
 
    while(ros::ok){
+  
+
      if(new_gl_rcvd)
      {
        new_gl_rcvd = false;
@@ -119,9 +130,21 @@ int main(int argc, char **argv)
        plan_trajectory(move_group, my_plan);
      }
 
-      
+      // ros::spin();
   }
+  
 
   
   return 0;
 }
+
+
+
+// x: -0.159703038639
+//     y: 0.778446685214
+//     z: 2.12785238828
+//   orientation: 
+//     x: -1.48251074356e-05
+//     y: -4.98372381145e-05
+//     z: 0.707052211016
+//     w: 0.707161345234 

@@ -1,0 +1,13 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:24:11:[m[K [01;31m[Kerror: [m[K‘[01m[Krosie2_test[m[K’ has not been declared
+ bool plan([01;31m[Krosie2_test[m[K::PlanSrv::Request  &goal)
+           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:24:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal[m[K’ was not declared in this scope
+ bool plan(rosie2_test::PlanSrv::Request  &[01;31m[Kgoal[m[K)
+                                           [01;31m[K^~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/readState.cpp:24:43:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kpowl[m[K’
+ bool plan(rosie2_test::PlanSrv::Request  &[01;36m[Kgoal[m[K)
+                                           [01;36m[K^~~~[m[K
+                                           [32m[Kpowl[m[K
+make[2]: *** [CMakeFiles/rosie2_test_node.dir/src/readState.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_node.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,18 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:28:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kduration[m[K’ was not declared in this scope
+     [01;31m[Kduration[m[K.sleep();
+     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:28:5:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/usr/include/boost/thread/pthread/timespec.hpp:20:0[m[K,
+                 from [01m[K/usr/include/boost/thread/pthread/condition_variable.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/thread/condition_variable.hpp:16[m[K,
+                 from [01m[K/usr/include/boost/thread/condition.hpp:13[m[K,
+                 from [01m[K/opt/ros/melodic/include/actionlib/client/simple_action_client.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:54[m[K,
+                 from [01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:2[m[K:
+[01m[K/usr/include/boost/chrono/duration.hpp:77:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::chrono::duration[m[K’
+     class [01;36m[Kduration[m[K;
+           [01;36m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/rosie2_test_srv_node.dir/src/service.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_srv_node.dir/all] Error 2
+make: *** [all] Error 2

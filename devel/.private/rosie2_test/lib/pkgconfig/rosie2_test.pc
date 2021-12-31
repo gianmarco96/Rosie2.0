@@ -3,6 +3,6 @@ prefix=/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test
 Name: rosie2_test
 Description: Description of rosie2_test
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/include
 Libs: -L${prefix}/lib 
 Requires: 

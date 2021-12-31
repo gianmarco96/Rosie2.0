@@ -1,0 +1,15 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:10:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit[m[K’ does not name a type; did you mean ‘[01m[Kmode_t[m[K’?
+   [01;31m[Kmoveit[m[K::planning_interface::MoveGroupInterface move_group(PLANNING_GROUP);
+   [01;31m[K^~~~~~[m[K
+   [32m[Kmode_t[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kbool add(rosie2_test::PlanSrv::Request&, rosie2_test::PlanSrv::Response&)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:17:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kmove_group[m[K’ was not declared in this scope
+   [01;31m[Kmove_group[m[K.setPoseTarget(req);
+   [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:17:3:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kgetgroups[m[K’
+   [01;36m[Kmove_group[m[K.setPoseTarget(req);
+   [01;36m[K^~~~~~~~~~[m[K
+   [32m[Kgetgroups[m[K
+make[2]: *** [CMakeFiles/rosie2_test_srv_node.dir/src/service.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_srv_node.dir/all] Error 2
+make: *** [all] Error 2

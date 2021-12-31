@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/robotiq_2f_gripper_control_generate_messages_cpp"
   "/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_input.h"
   "/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_output.h"
+  "/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_2f_gripper_control/include/robotiq_2f_gripper_control/UnityGripper.h"
 )
 
 # Per-language clean rules from dependency scanning.

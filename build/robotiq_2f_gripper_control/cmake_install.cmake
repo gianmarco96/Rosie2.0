@@ -136,6 +136,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_2f_gripper_control/srv" TYPE FILE FILES "/home/uk-ras-mrc/Rosie2.0/src/robotiq/robotiq_2f_gripper_control/srv/UnityGripper.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   include("/home/uk-ras-mrc/Rosie2.0/build/robotiq_2f_gripper_control/catkin_generated/safe_execute_install.cmake")
 endif()
 
