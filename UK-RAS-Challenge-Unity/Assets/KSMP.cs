@@ -59,7 +59,7 @@ public class KSMP : MonoBehaviour
                 if (!planRobot) 
                 { 
                     //RosConnector = RosConnectorObj.AddComponent<RosConnector>();
-                    gameObject.AddComponent<PoseArrayPublisher>();
+                    //gameObject.AddComponent<PoseArrayPublisher>();
                  }
                // RosConnector = RosConnectorObj.GetComponent<RosConnector>();
                 //RosConnector.RosBridgeServerUrl = NetworkMasterIP;
@@ -75,11 +75,11 @@ public class KSMP : MonoBehaviour
                             JointStateSubscriber = gameObject.GetComponent<JointStateSubscriber>();
                             JointStateSubscriber.Topic = Topic;
 
-                            gameObject.AddComponent<ExecuteTrajFeedbackSub>();
+                            //gameObject.AddComponent<ExecuteTrajFeedbackSub>();
                         }
                         else
                         {
-                            //gameObject.AddComponent<DisplayTrajectorySub>();
+                            gameObject.AddComponent<DisplayTrajectorySub>();
                         }
                         
                         /*****************************

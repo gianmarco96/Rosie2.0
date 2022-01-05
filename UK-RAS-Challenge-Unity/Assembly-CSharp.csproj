@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>4.8.2.0</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>4.11.4.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2019.4.13f1</UnityVersion>
@@ -66,13 +66,11 @@
   <ItemGroup>
     <Compile Include="Assets\CameraMove.cs" />
     <Compile Include="Assets\CreatePath.cs" />
-    <Compile Include="Assets\ExecuteTrajFeedbackSub.cs" />
+    <Compile Include="Assets\DisplayTrajectorySub.cs" />
     <Compile Include="Assets\FixedUnityPublisher.cs" />
     <Compile Include="Assets\FixedUnitySubscriber.cs" />
     <Compile Include="Assets\Geometry\msg\PoseArrayFixed.cs" />
-    <Compile Include="Assets\GripperControl.cs" />
-    <Compile Include="Assets\GripperControlSub.cs" />
-    <Compile Include="Assets\GripperPublisher.cs" />
+    <Compile Include="Assets\GripperHandler.cs" />
     <Compile Include="Assets\KSMP.cs" />
     <Compile Include="Assets\MoveObjWithMouse.cs" />
     <Compile Include="Assets\PoseArrayPublisher.cs" />
@@ -137,6 +135,15 @@
     <Compile Include="Assets\RosSharp\Scripts\Urdf\UrdfComponents\UrdfVisuals.cs" />
     <Compile Include="Assets\RosSharpMessages\Robotiq2fGripperControl\msg\Robotiq2FGripper_robot_input.cs" />
     <Compile Include="Assets\RosSharpMessages\Robotiq2fGripperControl\msg\Robotiq2FGripper_robot_output.cs" />
+    <Compile Include="Assets\Rosie2Test\srv\Robotiq2fGripperControl\srv\UnityGripperRequest.cs" />
+    <Compile Include="Assets\Rosie2Test\srv\Robotiq2fGripperControl\srv\UnityGripperResponse.cs" />
+    <Compile Include="Assets\Rosie2Test\srv\Rosie2Test\srv\PlanSrvRequest.cs" />
+    <Compile Include="Assets\Rosie2Test\srv\Rosie2Test\srv\PlanSrvResponse.cs" />
+    <Compile Include="Assets\ServicePlanner.cs" />
+    <Compile Include="Assets\Unused Scripts\ExecuteTrajFeedbackSub.cs" />
+    <Compile Include="Assets\Unused Scripts\GripperControl.cs" />
+    <Compile Include="Assets\Unused Scripts\GripperControlSub.cs" />
+    <Compile Include="Assets\Unused Scripts\GripperPublisher.cs" />
     <Compile Include="Assets\Unused Scripts\MoveItActionClient.cs" />
     <Compile Include="Assets\Unused Scripts\UnityMoveItActionClient.cs" />
     <Compile Include="Assets\WaypointSelection.cs" />
