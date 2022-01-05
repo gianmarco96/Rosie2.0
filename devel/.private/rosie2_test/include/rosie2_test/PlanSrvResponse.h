@@ -15,6 +15,7 @@
 #include <ros/builtin_message_traits.h>
 #include <ros/message_operations.h>
 
+#include <std_msgs/String.h>
 
 namespace rosie2_test
 {
@@ -24,17 +25,17 @@ struct PlanSrvResponse_
   typedef PlanSrvResponse_<ContainerAllocator> Type;
 
   PlanSrvResponse_()
-    : success(false)  {
+    : feedback()  {
     }
   PlanSrvResponse_(const ContainerAllocator& _alloc)
-    : success(false)  {
+    : feedback(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef uint8_t _success_type;
-  _success_type success;
+   typedef  ::std_msgs::String_<ContainerAllocator>  _feedback_type;
+  _feedback_type feedback;
 
 
 
@@ -65,7 +66,7 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::rosie2_test::PlanSrvResponse_<ContainerAllocator1> & lhs, const ::rosie2_test::PlanSrvResponse_<ContainerAllocator2> & rhs)
 {
-  return lhs.success == rhs.success;
+  return lhs.feedback == rhs.feedback;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -88,12 +89,12 @@ namespace message_traits
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosie2_test::PlanSrvResponse_<ContainerAllocator> >
-  : TrueType
+  : FalseType
   { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::rosie2_test::PlanSrvResponse_<ContainerAllocator> const>
-  : TrueType
+  : FalseType
   { };
 
 template <class ContainerAllocator>
@@ -122,12 +123,12 @@ struct MD5Sum< ::rosie2_test::PlanSrvResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "358e233cde0c8a8bcfea4ce193f8fc15";
+    return "be452bdb25132e643f85b55a53a6b2e3";
   }
 
   static const char* value(const ::rosie2_test::PlanSrvResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x358e233cde0c8a8bULL;
-  static const uint64_t static_value2 = 0xcfea4ce193f8fc15ULL;
+  static const uint64_t static_value1 = 0xbe452bdb25132e64ULL;
+  static const uint64_t static_value2 = 0x3f85b55a53a6b2e3ULL;
 };
 
 template<class ContainerAllocator>
@@ -146,8 +147,12 @@ struct Definition< ::rosie2_test::PlanSrvResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "bool success\n"
+    return "std_msgs/String feedback\n"
 "\n"
+"\n"
+"================================================================================\n"
+"MSG: std_msgs/String\n"
+"string data\n"
 ;
   }
 
@@ -166,7 +171,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.success);
+      stream.next(m.feedback);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -185,8 +190,9 @@ struct Printer< ::rosie2_test::PlanSrvResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::rosie2_test::PlanSrvResponse_<ContainerAllocator>& v)
   {
-    s << indent << "success: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.success);
+    s << indent << "feedback: ";
+    s << std::endl;
+    Printer< ::std_msgs::String_<ContainerAllocator> >::stream(s, indent + "  ", v.feedback);
   }
 };
 

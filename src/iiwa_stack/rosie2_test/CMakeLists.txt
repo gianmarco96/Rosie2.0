@@ -9,13 +9,13 @@ project(rosie2_test)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
-  iiwa_control
-  iiwa_description
-  iiwa_gazebo
-  iiwa_hw
-  iiwa_moveit
-  iiwa_msgs
-  iiwa_ros
+  #iiwa_control
+  #iiwa_description
+  #iiwa_gazebo
+  #iiwa_hw
+  #iiwa_moveit
+  #iiwa_msgs
+  #iiwa_ros
   #iiwa_ros_java
   message_generation
   message_runtime
@@ -93,7 +93,7 @@ find_package(catkin REQUIRED COMPONENTS
  generate_messages(
    DEPENDENCIES
    geometry_msgs   
-   iiwa_msgs   
+   #iiwa_msgs   
    moveit_msgs   
    sensor_msgs  
    std_msgs   

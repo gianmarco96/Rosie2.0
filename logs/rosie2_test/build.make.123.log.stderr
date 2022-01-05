@@ -1,0 +1,46 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kbool plan_motion_service(rosie2_test::PlanSrv::Request&, rosie2_test::PlanSrv::Response&)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:36:45:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmoveit::planning_interface::MoveGroupInterface::plan()[m[K’
+             bool success = (move_group.plan([01;31m[K)[m[K == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+                                             [01;31m[K^[m[K
+In file included from [01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:2:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:716:19:[m[K [01;36m[Knote: [m[Kcandidate: moveit::planning_interface::MoveItErrorCode moveit::planning_interface::MoveGroupInterface::plan(moveit::planning_interface::MoveGroupInterface::Plan&)
+   MoveItErrorCode [01;36m[Kplan[m[K(Plan& plan);
+                   [01;36m[K^~~~[m[K
+[01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:716:19:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:39:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksuccess[m[K’ was not declared in this scope
+         if(![01;31m[Ksuccess[m[K)
+             [01;31m[K^~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:39:13:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/boost/exception/detail/exception_ptr.hpp:16:0[m[K,
+                 from [01m[K/usr/include/boost/exception_ptr.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/thread/exceptional_ptr.hpp:10[m[K,
+                 from [01m[K/usr/include/boost/thread/future.hpp:25[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:24[m[K,
+                 from [01m[K/opt/ros/melodic/include/actionlib/managed_list.h:39[m[K,
+                 from [01m[K/opt/ros/melodic/include/actionlib/client/client_helpers.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/actionlib/client/action_client.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/actionlib/client/simple_action_client.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:54[m[K,
+                 from [01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:2[m[K:
+[01m[K/usr/include/boost/exception/detail/clone_current_exception.hpp:34:23:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::exception_detail::clone_current_exception_result::success[m[K’
+             int const [01;36m[Ksuccess[m[K=0;
+                       [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/boost/system/system_error.hpp:14:0[m[K,
+                 from [01m[K/usr/include/boost/thread/exceptions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/pthread/thread_data.hpp:10[m[K,
+                 from [01m[K/usr/include/boost/thread/pthread/condition_variable.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread/condition_variable.hpp:16[m[K,
+                 from [01m[K/usr/include/boost/thread/condition.hpp:13[m[K,
+                 from [01m[K/opt/ros/melodic/include/actionlib/client/simple_action_client.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:54[m[K,
+                 from [01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:2[m[K:
+[01m[K/usr/include/boost/system/error_code.hpp:64:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksuccess[m[K’
+         [01;36m[Ksuccess[m[K = 0,
+         [01;36m[K^~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:74:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktraj_feedback[m[K’ was not declared in this scope
+     [01;31m[Ktraj_feedback[m[K = n.advertise<std_msgs::String>("trajectory_feedback", 1000);
+     [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/rosie2_test_srv_node.dir/src/service.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_srv_node.dir/all] Error 2
+make: *** [all] Error 2

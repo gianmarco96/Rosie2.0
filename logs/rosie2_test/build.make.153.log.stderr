@@ -1,0 +1,8 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kbool plan_motion_service(rosie2_test::PlanSrv::Request&, rosie2_test::PlanSrv::Response&)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:42:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass moveit::planning_interface::MoveGroupInterface[m[K’ has no member named ‘[01m[KayncExecute[m[K’; did you mean ‘[01m[KasyncExecute[m[K’?
+             success = (move_group.[01;31m[KayncExecute[m[K(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+                                   [01;31m[K^~~~~~~~~~~[m[K
+                                   [32m[KasyncExecute[m[K
+make[2]: *** [CMakeFiles/rosie2_test_srv_node.dir/src/service.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_srv_node.dir/all] Error 2
+make: *** [all] Error 2

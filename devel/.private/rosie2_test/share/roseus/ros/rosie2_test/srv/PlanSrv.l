@@ -18,19 +18,23 @@
   (ros::roseus-add-msgs "geometry_msgs"))
 
 
+(if (not (find-package "STD_MSGS"))
+  (ros::roseus-add-msgs "std_msgs"))
 
 
 (defclass rosie2_test::PlanSrvRequest
   :super ros::object
-  :slots (_pose_goal ))
+  :slots (_pose_goal _plan ))
 
 (defmethod rosie2_test::PlanSrvRequest
   (:init
    (&key
     ((:pose_goal __pose_goal) (instance geometry_msgs::PoseArray :init))
+    ((:plan __plan) nil)
     )
    (send-super :init)
    (setq _pose_goal __pose_goal)
+   (setq _plan __plan)
    self)
   (:pose_goal
    (&rest __pose_goal)
@@ -39,11 +43,16 @@
      (progn
        (if __pose_goal (setq _pose_goal (car __pose_goal)))
        _pose_goal)))
+  (:plan
+   (&optional __plan)
+   (if __plan (setq _plan __plan)) _plan)
   (:serialization-length
    ()
    (+
     ;; geometry_msgs/PoseArray _pose_goal
     (send _pose_goal :serialization-length)
+    ;; bool _plan
+    1
     ))
   (:serialize
    (&optional strm)
@@ -51,49 +60,57 @@
               (make-string-output-stream (send self :serialization-length)))))
      ;; geometry_msgs/PoseArray _pose_goal
        (send _pose_goal :serialize s)
+     ;; bool _plan
+       (if _plan (write-byte -1 s) (write-byte 0 s))
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
    ;; geometry_msgs/PoseArray _pose_goal
      (send _pose_goal :deserialize buf ptr-) (incf ptr- (send _pose_goal :serialization-length))
+   ;; bool _plan
+     (setq _plan (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;;
    self)
   )
 
 (defclass rosie2_test::PlanSrvResponse
   :super ros::object
-  :slots (_success ))
+  :slots (_feedback ))
 
 (defmethod rosie2_test::PlanSrvResponse
   (:init
    (&key
-    ((:success __success) nil)
+    ((:feedback __feedback) (instance std_msgs::String :init))
     )
    (send-super :init)
-   (setq _success __success)
+   (setq _feedback __feedback)
    self)
-  (:success
-   (&optional __success)
-   (if __success (setq _success __success)) _success)
+  (:feedback
+   (&rest __feedback)
+   (if (keywordp (car __feedback))
+       (send* _feedback __feedback)
+     (progn
+       (if __feedback (setq _feedback (car __feedback)))
+       _feedback)))
   (:serialization-length
    ()
    (+
-    ;; bool _success
-    1
+    ;; std_msgs/String _feedback
+    (send _feedback :serialization-length)
     ))
   (:serialize
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; bool _success
-       (if _success (write-byte -1 s) (write-byte 0 s))
+     ;; std_msgs/String _feedback
+       (send _feedback :serialize s)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; bool _success
-     (setq _success (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; std_msgs/String _feedback
+     (send _feedback :deserialize buf ptr-) (incf ptr- (send _feedback :serialization-length))
    ;;
    self)
   )
@@ -102,7 +119,7 @@
   :super ros::object
   :slots ())
 
-(setf (get rosie2_test::PlanSrv :md5sum-) "7c453fc64b64c06915f81b28f9408fd6")
+(setf (get rosie2_test::PlanSrv :md5sum-) "bc5ea13bd95c2618bb349c7e46d2ed2b")
 (setf (get rosie2_test::PlanSrv :datatype-) "rosie2_test/PlanSrv")
 (setf (get rosie2_test::PlanSrv :request) rosie2_test::PlanSrvRequest)
 (setf (get rosie2_test::PlanSrv :response) rosie2_test::PlanSrvResponse)
@@ -110,10 +127,11 @@
 (defmethod rosie2_test::PlanSrvRequest
   (:response () (instance rosie2_test::PlanSrvResponse :init)))
 
-(setf (get rosie2_test::PlanSrvRequest :md5sum-) "7c453fc64b64c06915f81b28f9408fd6")
+(setf (get rosie2_test::PlanSrvRequest :md5sum-) "bc5ea13bd95c2618bb349c7e46d2ed2b")
 (setf (get rosie2_test::PlanSrvRequest :datatype-) "rosie2_test/PlanSrvRequest")
 (setf (get rosie2_test::PlanSrvRequest :definition-)
       "geometry_msgs/PoseArray pose_goal
+bool plan
 
 ================================================================================
 MSG: geometry_msgs/PoseArray
@@ -161,14 +179,19 @@ float64 y
 float64 z
 float64 w
 ---
-bool success
+std_msgs/String feedback
 
+
+================================================================================
+MSG: std_msgs/String
+string data
 ")
 
-(setf (get rosie2_test::PlanSrvResponse :md5sum-) "7c453fc64b64c06915f81b28f9408fd6")
+(setf (get rosie2_test::PlanSrvResponse :md5sum-) "bc5ea13bd95c2618bb349c7e46d2ed2b")
 (setf (get rosie2_test::PlanSrvResponse :datatype-) "rosie2_test/PlanSrvResponse")
 (setf (get rosie2_test::PlanSrvResponse :definition-)
       "geometry_msgs/PoseArray pose_goal
+bool plan
 
 ================================================================================
 MSG: geometry_msgs/PoseArray
@@ -216,12 +239,16 @@ float64 y
 float64 z
 float64 w
 ---
-bool success
+std_msgs/String feedback
 
+
+================================================================================
+MSG: std_msgs/String
+string data
 ")
 
 
 
-(provide :rosie2_test/PlanSrv "7c453fc64b64c06915f81b28f9408fd6")
+(provide :rosie2_test/PlanSrv "bc5ea13bd95c2618bb349c7e46d2ed2b")
 
 

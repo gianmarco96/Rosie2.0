@@ -25,10 +25,12 @@ struct PlanSrvRequest_
   typedef PlanSrvRequest_<ContainerAllocator> Type;
 
   PlanSrvRequest_()
-    : pose_goal()  {
+    : pose_goal()
+    , plan(false)  {
     }
   PlanSrvRequest_(const ContainerAllocator& _alloc)
-    : pose_goal(_alloc)  {
+    : pose_goal(_alloc)
+    , plan(false)  {
   (void)_alloc;
     }
 
@@ -36,6 +38,9 @@ struct PlanSrvRequest_
 
    typedef  ::geometry_msgs::PoseArray_<ContainerAllocator>  _pose_goal_type;
   _pose_goal_type pose_goal;
+
+   typedef uint8_t _plan_type;
+  _plan_type plan;
 
 
 
@@ -66,7 +71,8 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::rosie2_test::PlanSrvRequest_<ContainerAllocator1> & lhs, const ::rosie2_test::PlanSrvRequest_<ContainerAllocator2> & rhs)
 {
-  return lhs.pose_goal == rhs.pose_goal;
+  return lhs.pose_goal == rhs.pose_goal &&
+    lhs.plan == rhs.plan;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -123,12 +129,12 @@ struct MD5Sum< ::rosie2_test::PlanSrvRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "ff242965d2ce288fcadd0d46f5526f3d";
+    return "9e59f9886b1a5776ac4cab26e76f900b";
   }
 
   static const char* value(const ::rosie2_test::PlanSrvRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xff242965d2ce288fULL;
-  static const uint64_t static_value2 = 0xcadd0d46f5526f3dULL;
+  static const uint64_t static_value1 = 0x9e59f9886b1a5776ULL;
+  static const uint64_t static_value2 = 0xac4cab26e76f900bULL;
 };
 
 template<class ContainerAllocator>
@@ -148,6 +154,7 @@ struct Definition< ::rosie2_test::PlanSrvRequest_<ContainerAllocator> >
   static const char* value()
   {
     return "geometry_msgs/PoseArray pose_goal\n"
+"bool plan\n"
 "\n"
 "================================================================================\n"
 "MSG: geometry_msgs/PoseArray\n"
@@ -213,6 +220,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.pose_goal);
+      stream.next(m.plan);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -234,6 +242,8 @@ struct Printer< ::rosie2_test::PlanSrvRequest_<ContainerAllocator> >
     s << indent << "pose_goal: ";
     s << std::endl;
     Printer< ::geometry_msgs::PoseArray_<ContainerAllocator> >::stream(s, indent + "  ", v.pose_goal);
+    s << indent << "plan: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.plan);
   }
 };
 

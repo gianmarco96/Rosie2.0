@@ -3,6 +3,7 @@
 
 (defsystem "rosie2_test-srv"
   :depends-on (:roslisp-msg-protocol :roslisp-utils :geometry_msgs-msg
+               :std_msgs-msg
 )
   :components ((:file "_package")
     (:file "PlanSrv" :depends-on ("_package_PlanSrv"))

@@ -1,0 +1,7 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kbool plan_motion_service(rosie2_test::PlanSrv::Request&, rosie2_test::PlanSrv::Response&)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:42:43:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kconst[m[K’
+             success = (move_group.execute([01;31m[Kconst[m[K my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+                                           [01;31m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/rosie2_test_srv_node.dir/src/service.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_srv_node.dir/all] Error 2
+make: *** [all] Error 2

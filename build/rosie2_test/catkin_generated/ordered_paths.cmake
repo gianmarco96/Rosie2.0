@@ -1,1 +1,1 @@
-set(ORDERED_PATHS "/home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_hw/lib;/home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_ros/lib;/opt/ros/melodic/lib")
+set(ORDERED_PATHS "/opt/ros/melodic/lib")

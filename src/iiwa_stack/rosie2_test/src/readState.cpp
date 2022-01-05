@@ -5,7 +5,7 @@
 #include <string>
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
-#include "rosie2_test/PlanSrv.h"
+//#include "rosie2_test/PlanSrv.h"
 
 #include <moveit_msgs/DisplayRobotState.h>
 
@@ -114,7 +114,7 @@ int main(int argc, char **argv)
 
   
 
-  rosie2_test::PlanSrv srv;
+  //rosie2_test::PlanSrv srv;
 
    while(ros::ok){
   

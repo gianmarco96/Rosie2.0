@@ -1,0 +1,39 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kbool plan_motion_service(rosie2_test::PlanSrv::Request&, rosie2_test::PlanSrv::Response&)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:20:40:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kmoveit::planning_interface::MoveItErrorCode[m[K’ to ‘[01m[Kbool[m[K’ in initialization
+         bool success = move_group.move([01;31m[K)[m[K;
+                                        [01;31m[K^[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:22:19:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs[m[K’
+         std_msgs::[01;31m[KString[m[K feedback_str;
+                   [01;31m[K^~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:23:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kfeedback_str[m[K’ was not declared in this scope
+         [01;31m[Kfeedback_str[m[K.data = "Received pose goal from Unity %s", success ? "" : "FAILED" ;
+         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:29:28:[m[K [01;31m[Kerror: [m[K‘[01m[Krosie2_test::PlanSrvRequest_<std::allocator<void> >::_pose_goal_type {aka struct geometry_msgs::PoseArray_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksize[m[K’
+     else if (req.pose_goal.[01;31m[Ksize[m[K()>1)
+                            [01;31m[K^~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:36:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_goals[m[K’ was not declared in this scope
+         double fraction = move_group.computeCartesianPath([01;31m[Kpose_goals[m[K, eef_step, jump_threshold, trajectory);
+                                                           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:37:19:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs[m[K’
+         std_msgs::[01;31m[KString[m[K feedback_str;
+                   [01;31m[K^~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:38:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kfeedback_str[m[K’ was not declared in this scope
+         [01;31m[Kfeedback_str[m[K.data = "Received trajectory from Unity (Cartesian path) ("+ std::to_string(fraction * 100.0) + "% acheived)" ;
+         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:41:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_plan[m[K’ was not declared in this scope
+         [01;31m[Kmy_plan[m[K.trajectory_= trajectory;
+         [01;31m[K^~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:60:21:[m[K [01;31m[Kerror: [m[K‘[01m[Knode_handle[m[K’ was not declared in this scope
+     traj_feedback = [01;31m[Knode_handle[m[K.advertise<std_msgs::String>("trajectory_feedback", 1000);
+                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:60:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K__dso_handle[m[K’
+     traj_feedback = [01;36m[Knode_handle[m[K.advertise<std_msgs::String>("trajectory_feedback", 1000);
+                     [01;36m[K^~~~~~~~~~~[m[K
+                     [32m[K__dso_handle[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:60:53:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs[m[K’
+     traj_feedback = node_handle.advertise<std_msgs::[01;31m[KString[m[K>("trajectory_feedback", 1000);
+                                                     [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/rosie2_test_srv_node.dir/src/service.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_srv_node.dir/all] Error 2
+make: *** [all] Error 2

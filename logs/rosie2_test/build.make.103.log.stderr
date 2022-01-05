@@ -1,0 +1,10 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kbool plan_motion_service(rosie2_test::PlanSrv::Request&, rosie2_test::PlanSrv::Response&)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:37:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_goals[m[K’ was not declared in this scope
+         double fraction = move_group.computeCartesianPath([01;31m[Kpose_goals[m[K, eef_step, jump_threshold, trajectory);
+                                                           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:42:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_plan[m[K’ was not declared in this scope
+         [01;31m[Kmy_plan[m[K.trajectory_= trajectory;
+         [01;31m[K^~~~~~~[m[K
+make[2]: *** [CMakeFiles/rosie2_test_srv_node.dir/src/service.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_srv_node.dir/all] Error 2
+make: *** [all] Error 2

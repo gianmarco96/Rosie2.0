@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"rosie2_test\"
 
-CXX_INCLUDES = -I/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/include -I/home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_msgs/include -I/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/iiwa_ros/include -I/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/iiwa_hw/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -I/usr/include/OGRE 
+CXX_INCLUDES = -I/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -I/usr/include/OGRE 
 

@@ -90,11 +90,6 @@ rosie2_test_node_EXTERNAL_OBJECTS =
 
 /home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node: CMakeFiles/rosie2_test_node.dir/src/readState.cpp.o
 /home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node: CMakeFiles/rosie2_test_node.dir/build.make
-/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node: /home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_hw/lib/libiiwa_hw.so
-/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node: /opt/ros/melodic/lib/libcontroller_manager.so
-/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node: /opt/ros/melodic/lib/libcontrol_toolbox.so
-/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node: /opt/ros/melodic/lib/librealtime_tools.so
-/home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node: /home/uk-ras-mrc/Rosie2.0/devel/.private/iiwa_ros/lib/libiiwa_ros.so
 /home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node: /opt/ros/melodic/lib/libmoveit_common_planning_interface_objects.so
 /home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node: /opt/ros/melodic/lib/libmoveit_planning_scene_interface.so
 /home/uk-ras-mrc/Rosie2.0/devel/.private/rosie2_test/lib/rosie2_test/rosie2_test_node: /opt/ros/melodic/lib/libmoveit_move_group_interface.so

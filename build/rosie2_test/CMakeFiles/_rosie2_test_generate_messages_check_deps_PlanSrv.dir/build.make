@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/uk-ras-mrc/Rosie2.0/build/rosie2_test
 include CMakeFiles/_rosie2_test_generate_messages_check_deps_PlanSrv.dir/progress.make
 
 CMakeFiles/_rosie2_test_generate_messages_check_deps_PlanSrv:
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rosie2_test /home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/srv/PlanSrv.srv geometry_msgs/Pose:std_msgs/Header:geometry_msgs/Point:geometry_msgs/Quaternion:geometry_msgs/PoseArray
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rosie2_test /home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/srv/PlanSrv.srv std_msgs/String:geometry_msgs/PoseArray:geometry_msgs/Pose:std_msgs/Header:geometry_msgs/Quaternion:geometry_msgs/Point
 
 _rosie2_test_generate_messages_check_deps_PlanSrv: CMakeFiles/_rosie2_test_generate_messages_check_deps_PlanSrv
 _rosie2_test_generate_messages_check_deps_PlanSrv: CMakeFiles/_rosie2_test_generate_messages_check_deps_PlanSrv.dir/build.make

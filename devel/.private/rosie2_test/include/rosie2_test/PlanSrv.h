@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::rosie2_test::PlanSrv > {
   static const char* value()
   {
-    return "7c453fc64b64c06915f81b28f9408fd6";
+    return "bc5ea13bd95c2618bb349c7e46d2ed2b";
   }
 
   static const char* value(const ::rosie2_test::PlanSrv&) { return value(); }

@@ -23,7 +23,7 @@
     <node name="rosbridge_websocket" pkg="rosbridge_server" type="rosbridge_websocket">
         <param name="unregister_timeout" value="10000"/>
     </node>
-    <include file="$(find rosie2_test)/launch/rosie2_test.launch"/>
+    <!-- <include file="$(find rosie2_test)/launch/rosie2_test.launch"/> -->
     <include file="$(find robotiq_2f_gripper_control)/launch/robotiq_2f_gripper_drivers.launch"/>
     
     <!--Put in a namespace to allow many instances to run-->
@@ -37,6 +37,9 @@
         
         <!-- Given the published joint states, publish tf for the robot links -->
         <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
+
+	<node name="rosie2_planner_server" pkg="rosie2_test" type="rosie2_test_srv_node" respawn="true" output="screen" />
+	<node name="rosie2_gripper_server" pkg="robotiq_2f_gripper_control" type="unity_gripper_node.py" respawn="true" output="screen" />
         
         <!-- Load move_group -->
         <include file="$(find iiwa_moveit)/launch/move_group.launch">

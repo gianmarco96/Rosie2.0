@@ -1,0 +1,14 @@
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kstd::vector<geometry_msgs::Pose_<std::allocator<void> > > trjacteory_message(rosie2_test::PlanSrv::Request&)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:12:35:[m[K [01;31m[Kerror: [m[K‘[01m[Krosie2_test::PlanSrvRequest_<std::allocator<void> >::_pose_goal_type {aka struct geometry_msgs::PoseArray_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksize[m[K’
+     for (int i=0; i<req.pose_goal.[01;31m[Ksize[m[K(); i++)
+                                   [01;31m[K^~~~[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:15:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+     [01;31m[K}[m[K
+     [01;31m[K^[m[K
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/rosie2_test/src/service.cpp:74:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktraj_feedback[m[K’ was not declared in this scope
+     [01;31m[Ktraj_feedback[m[K = n.advertise<std_msgs::String>("trajectory_feedback", 1000);
+     [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/rosie2_test_srv_node.dir/src/service.cpp.o] Error 1
+make[1]: *** [CMakeFiles/rosie2_test_srv_node.dir/all] Error 2
+make: *** [all] Error 2

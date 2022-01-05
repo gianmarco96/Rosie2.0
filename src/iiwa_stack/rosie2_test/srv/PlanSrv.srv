@@ -1,3 +1,4 @@
 geometry_msgs/PoseArray pose_goal
+bool plan
 ---
-bool success
+std_msgs/String feedback
