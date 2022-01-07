@@ -26,34 +26,39 @@ namespace RosSharp.RosBridgeClient
         private bool readyToshow;
         private MessageTypes.Moveit.DisplayTrajectory plannedTrajectory;
         private int point_counter = 0;
+        public string planned_path_topic = "iiwa/move_group/display_planned_path";
+        public string robotName;
+        public int numberOfJoints;
         // need to generalise to case of joints > or < 7
-        private JointStateWriter[] JointStateWriter = new JointStateWriter[7];
+        private List <JointStateWriter> JointStateWriterList = new List<JointStateWriter>();
 
         /*****************************************************************
          *                              TEST
          * ****************************************************************/
-        public double timeRemaining = 0;
-        public bool timerIsRunning = false;
+        private double timeRemaining = 0;
+        private bool timerIsRunning = false;
 
 
         /*****************************************************************
          *                              END
          * ****************************************************************/
-        public float timer = 0;
+        private float timer = 0;
 
         protected override void Start()
         {
 
             timerIsRunning = true;
+            robotName = gameObject.name;
 
 
-            base.Topic = "iiwa/move_group/display_planned_path";
+            base.Topic = planned_path_topic;
             base.Start();
-            for (int i = 0; i < 7; i++ )
-            {
-                int n = i + 1;
-                JointStateWriter[i] = GameObject.Find("t_iiwa_link_"+n.ToString()).GetComponent<JointStateWriter>();
-            }
+            //for (int i = 0; i < numberOfJoints; i++ )
+            //{
+            //    int n = i + 1;
+            //    JointStateWriterList = GameObject.Find("t_iiwa_link_"+n.ToString()).GetComponent<JointStateWriter>();
+            //}
+            //Debug.Log(generateJointStateWrites(robotName)[0].name);
 
     }
 
@@ -96,6 +101,9 @@ namespace RosSharp.RosBridgeClient
         {
             int n_joints = plannedTrajectory.trajectory[0].joint_trajectory.points[0].positions.Length;
             int n_points = plannedTrajectory.trajectory[0].joint_trajectory.points.Length;
+            JointStateWriter[] JointStateWriter = new JointStateWriter[7];
+
+            JointStateWriter = generateJointStateWrites( robotName);
 
             //for (int j = 0; j < n_points; j++)
             //{
@@ -124,6 +132,20 @@ namespace RosSharp.RosBridgeClient
                 isMessageReceived = false;
             }
 
+        }
+
+        private JointStateWriter[] generateJointStateWrites(string robotName)
+        {
+            GameObject robot = GameObject.Find(robotName);
+            //Debug.Log(robot);
+            int jointSize = robot.GetComponentsInChildren<JointStateWriter>().Length;
+
+
+            for (int i =0; i < jointSize; i++)
+            {
+                JointStateWriterList.Add(robot.GetComponentsInChildren<JointStateWriter>()[i]);
+            }
+            return JointStateWriterList.ToArray();
         }
 
 

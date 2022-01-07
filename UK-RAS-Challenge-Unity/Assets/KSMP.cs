@@ -79,7 +79,7 @@ public class KSMP : MonoBehaviour
                         }
                         else
                         {
-                            gameObject.AddComponent<DisplayTrajectorySub>();
+                            //gameObject.AddComponent<DisplayTrajectorySub>();
                         }
                         
                         /*****************************
@@ -122,6 +122,14 @@ public class KSMP : MonoBehaviour
             {
                 gameObject.AddComponent<CreatePath>();
             }
+        }
+        else
+        {
+            if (gameObject.GetComponent<DisplayTrajectorySub>() == null)
+            {
+                gameObject.AddComponent<DisplayTrajectorySub>();
+            }
+            ;
         }
     }
 

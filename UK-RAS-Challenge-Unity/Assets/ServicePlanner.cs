@@ -30,6 +30,7 @@ namespace RosSharp.RosBridgeClient
         private int numberOfPoints = 0;
         private MessageTypes.Geometry.PoseArrayFixed poseRequest = new MessageTypes.Geometry.PoseArrayFixed();
         private string uri = "ws://192.168.1.186:9090";
+        public string robotName;
 
         
         private void Awake()
@@ -73,7 +74,7 @@ namespace RosSharp.RosBridgeClient
             poseRequest.poses.Clear();
             for (int i = 0; i < numberOfPoints; i++)
             {
-                string name = "Sphere_" + i.ToString();
+                string name = "Sphere_" + robotName + "_" + i.ToString();
                 GameObject spehere = GameObject.Find(name);
                 poseRequest.poses.Add(new MessageTypes.Geometry.Pose());
 
