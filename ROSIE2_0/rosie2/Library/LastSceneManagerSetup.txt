@@ -1,0 +1,5 @@
+sceneSetups:
+- path: C:/Users/Gianmarco/Documents/GitHub/ros-sharp/Rosie2.0/UK-RAS-Challenge-Unity/Assets/Scenes/Challenge.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0

@@ -31,6 +31,7 @@ public class KSMP : MonoBehaviour
 
 
     private UrdfRobot UrdfRobot;
+    private GameObject TrajectoryHandler;
     private GameObject RosConnectorObj;
     private RosConnector RosConnector;
     private JointStatePatcher JointPatcher;
@@ -116,14 +117,17 @@ public class KSMP : MonoBehaviour
     }
 
     public void OnValidate()
-    { if(!planRobot)
+    {
+        if (GameObject.Find("TrajectoryHandler") == null)
         {
-            if (gameObject.GetComponent<CreatePath>() == null)
-            {
-                gameObject.AddComponent<CreatePath>();
-            }
+            TrajectoryHandler = new GameObject("TrajectoryHandler");
+            TrajectoryHandler.AddComponent<CreatePath>();
         }
         else
+            TrajectoryHandler = GameObject.Find("TrajectoryHandler");
+
+        if (planRobot)
+       
         {
             if (gameObject.GetComponent<DisplayTrajectorySub>() == null)
             {

@@ -17,7 +17,6 @@ public class CreatePath : MonoBehaviour
     private int requestedNumberOfWaypoints = 0;
     public GameObject spherePrefab;
     public Material sphereMaterial;
-    public string robotName;
 
     void Awake()
     {
@@ -89,7 +88,7 @@ public class CreatePath : MonoBehaviour
             for (int i = oldNumberOfWaypoints; i < numberOfWaypoints; i++)
             {
                 //Debug.Log("Creating new waypoint");
-                string name = "Sphere_" + robotName + "_" + i.ToString();
+                string name = "Sphere_" +  i.ToString();
                 //GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 GameObject sphere = Instantiate(spherePrefab, new Vector3(0, 0, 0), Quaternion.identity);
                 sphere.GetComponent<MeshRenderer>().material = sphereMaterial;

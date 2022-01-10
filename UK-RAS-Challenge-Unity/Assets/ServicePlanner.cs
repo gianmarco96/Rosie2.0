@@ -30,8 +30,9 @@ namespace RosSharp.RosBridgeClient
         private int numberOfPoints = 0;
         private MessageTypes.Geometry.PoseArrayFixed poseRequest = new MessageTypes.Geometry.PoseArrayFixed();
         private string uri = "ws://192.168.1.186:9090";
-        public string robotName;
+        //public string robotName;
 
+        private string serviceName;
         
         private void Awake()
         {
@@ -51,8 +52,8 @@ namespace RosSharp.RosBridgeClient
             RosConnector = GameObject.FindObjectOfType<RosConnector>();
             uri = RosConnector.RosBridgeServerUrl;
             rosSocket = new RosSocket(new RosBridgeClient.Protocols.WebSocketSharpProtocol(uri));
-
-            createPath = gameObject.GetComponent<CreatePath>();
+            
+            createPath = GameObject.Find("TrajectoryHandler").GetComponent<CreatePath>();
             numberOfPoints = createPath.numberOfWaypoints;
             MoveitStatText = GameObject.Find("MoveItStatsText");
             MoveitStatText.GetComponent<TMP_Text>().text = "suuuca";
@@ -69,12 +70,11 @@ namespace RosSharp.RosBridgeClient
 
         private void UpdateMessage()
         {
-            createPath = gameObject.GetComponent<CreatePath>();
             numberOfPoints = createPath.numberOfWaypoints;
             poseRequest.poses.Clear();
             for (int i = 0; i < numberOfPoints; i++)
             {
-                string name = "Sphere_" + robotName + "_" + i.ToString();
+                string name = "Sphere_" + i.ToString();
                 GameObject spehere = GameObject.Find(name);
                 poseRequest.poses.Add(new MessageTypes.Geometry.Pose());
 
@@ -93,31 +93,46 @@ namespace RosSharp.RosBridgeClient
         {
             UpdateMessage();
 
+            ServiceNameConstructor();
 
             PlanSrvRequest request = new PlanSrvRequest(poseRequest, true);
             //Call service request
-            rosSocket.CallService<PlanSrvRequest, PlanSrvResponse>("iiwa/planService", ServiceCallHandler, request);
+            rosSocket.CallService<PlanSrvRequest, PlanSrvResponse>(serviceName, ServiceCallHandler, request);
         }
 
         void OnClickExecute()
         {
             UpdateMessage();
+
+            ServiceNameConstructor();
+
             PlanSrvRequest request = new PlanSrvRequest(poseRequest, false);
             //Call service request
-            rosSocket.CallService<PlanSrvRequest, PlanSrvResponse>("iiwa/planService", ServiceCallHandler, request);
+            rosSocket.CallService<PlanSrvRequest, PlanSrvResponse>(serviceName, ServiceCallHandler, request);
         }
+
+
         private void updateMessage( string feedback)
         {
             MoveitStatText.GetComponent<TMP_Text>().text = feedback; 
 
         }
+
         private void ServiceCallHandler(PlanSrvResponse res)
         {
             Debug.Log(res.feedback.data);
 
             test = res.feedback.data;
 
+        }
 
+        private void ServiceNameConstructor()
+        {
+            Dropdown dropdown = GameObject.Find("RobotSelection").GetComponent<Dropdown>();
+            if (dropdown.options[dropdown.value].text == "ur5")
+                serviceName = "planService";
+            else
+                serviceName = "iiwa/planService";
 
         }
     }
