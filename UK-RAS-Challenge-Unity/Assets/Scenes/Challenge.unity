@@ -881,7 +881,6 @@ Transform:
   - {fileID: 1856500319}
   - {fileID: 1826347214}
   - {fileID: 658257238}
-  - {fileID: 1722578329}
   m_Father: {fileID: 1367208874}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4033,7 +4032,6 @@ MonoBehaviour:
   TypeOfEntity: 0
   planRobot: 1
   Topic: iiwa/joint_states
-  ActionName: move_group
 --- !u!114 &301137859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4061,7 +4059,7 @@ Transform:
   - {fileID: 561738050}
   - {fileID: 726411377}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &301137861
 MonoBehaviour:
@@ -18187,7 +18185,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 33.073, y: 204.38199, z: 13.893001}
 --- !u!1 &1190106823
 GameObject:
@@ -21187,7 +21185,6 @@ MonoBehaviour:
   TypeOfEntity: 0
   planRobot: 0
   Topic: iiwa/joint_states
-  ActionName: move_group
 --- !u!114 &1367208877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21367,7 +21364,7 @@ MonoBehaviour:
   SecondsTimeout: 40
   Serializer: 1
   protocol: 0
-  RosBridgeServerUrl: ws://192.168.252.98:9090
+  RosBridgeServerUrl: ws://192.168.1.2:9090
 --- !u!4 &1376646314
 Transform:
   m_ObjectHideFlags: 0
@@ -30263,12 +30260,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722578328}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 54009897}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1726574699
 GameObject:
@@ -35324,7 +35321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06fba3b135d6a064c8ef5e81658b3fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Topic: 
+  Topic: joint_states
   TimeStep: 0
   planned_path_topic: move_group/display_planned_path
   robotName: ur5
@@ -35346,7 +35343,6 @@ MonoBehaviour:
   TypeOfEntity: 0
   planRobot: 1
   Topic: joint_states
-  ActionName: move_group
 --- !u!114 &2057861286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35368,13 +35364,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057861283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.251, y: 1.09, z: -0.299}
+  m_LocalPosition: {x: -1.6, y: 1.2, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 576734926}
   - {fileID: 1883770920}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2060069304
 GameObject:
@@ -36163,7 +36159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 33.073, y: 204.38199, z: 13.893001}
 --- !u!1 &2135292271
 GameObject:

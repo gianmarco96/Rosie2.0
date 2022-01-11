@@ -108,43 +108,9 @@ public class CreatePath : MonoBehaviour
             Debug.LogWarning("There are already " + oldNumberOfWaypoints.ToString() + " Waypoints!");
         }
 
-        //EmptyEventSystem();
     }
 
-    /* Old Function
-    public void CreateWaypoints(int numberOfWaypoints)
-    {
-        Debug.Log("Creating " + numberOfWaypoints + " waypoints");
-        int oldNumberOfWaypoints = FindSpheres().Length;
-        int newNumberOfWaypoints = numberOfWaypoints- oldNumberOfWaypoints;
-        if (numberOfWaypoints > oldNumberOfWaypoints)
-        {
-            //Debug.Log("I'm here!");
-            int counter = oldNumberOfWaypoints;
-            for (int i = 0; i < newNumberOfWaypoints; i++)
-            {
-                Debug.Log("Creating new waypoint");
-                string name = "Sphere_" + counter.ToString();
-                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                sphere.name = name;
-                sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-                sphere.transform.position = new Vector3(-((i + 1) / 10.0f), 2.0f, 0f);
-                //Debug.Log(counter);
-                sphere.gameObject.tag = "Respawn";
-                sphere.AddComponent<MoveObjWithMouse>();
-                sphere.AddComponent<ObjectManipulator>();
-                sphere.AddComponent<NearInteractionGrabbable>();
-                counter++;
-            }
-            
-        }
-        else
-        {
-            Debug.Log("There are already " + oldNumberOfWaypoints.ToString() + " Waypoints!");
-        }
-
-    }
-     */
+   
 
     public void DestroyWaypoints()
     {
@@ -154,7 +120,6 @@ public class CreatePath : MonoBehaviour
             DestroyImmediate(sphere);
         }
 
-        //EmptyEventSystem();
     }
 
     public GameObject[] FindSpheres()
@@ -168,9 +133,5 @@ public class CreatePath : MonoBehaviour
         return requestedNumberOfWaypoints;
     }
 
-    //    private void EmptyEventSystem()
-    //    {
-    //        GameObject eventSystemObject = GameObject.Find("EventSystem");
-    //        eventSystemObject.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
-    //    }
+
 }

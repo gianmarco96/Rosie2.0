@@ -36,9 +36,6 @@ namespace RosSharp.RosBridgeClient
         
         private void Awake()
         {
-
-            
-
             planButton = GameObject.Find("PlanGoalButton");
             planButton.GetComponent<Button>().onClick.AddListener(OnClickPlan);
 
@@ -57,9 +54,6 @@ namespace RosSharp.RosBridgeClient
             numberOfPoints = createPath.numberOfWaypoints;
             MoveitStatText = GameObject.Find("MoveItStatsText");
             MoveitStatText.GetComponent<TMP_Text>().text = "suuuca";
-
-
-
         }
 
         private void FixedUpdate()
@@ -71,16 +65,19 @@ namespace RosSharp.RosBridgeClient
         private void UpdateMessage()
         {
             numberOfPoints = createPath.numberOfWaypoints;
+            
+            poseRequest.header.frame_id = "world";
             poseRequest.poses.Clear();
             for (int i = 0; i < numberOfPoints; i++)
             {
                 string name = "Sphere_" + i.ToString();
                 GameObject spehere = GameObject.Find(name);
                 poseRequest.poses.Add(new MessageTypes.Geometry.Pose());
+                Vector3 adjustedPose = poseAdjustment(spehere.transform.position);
 
-                poseRequest.poses[i].position.x = spehere.transform.position.z;
-                poseRequest.poses[i].position.y = -spehere.transform.position.x;
-                poseRequest.poses[i].position.z = spehere.transform.position.y;
+                poseRequest.poses[i].position.x = adjustedPose.z;
+                poseRequest.poses[i].position.y = -adjustedPose.x;
+                poseRequest.poses[i].position.z = adjustedPose.y;
                 poseRequest.poses[i].orientation.w = spehere.transform.rotation.w;
                 poseRequest.poses[i].orientation.x = spehere.transform.rotation.z;
                 poseRequest.poses[i].orientation.y = -spehere.transform.rotation.x;
@@ -92,7 +89,6 @@ namespace RosSharp.RosBridgeClient
         void OnClickPlan()
         {
             UpdateMessage();
-
             ServiceNameConstructor();
 
             PlanSrvRequest request = new PlanSrvRequest(poseRequest, true);
@@ -121,7 +117,6 @@ namespace RosSharp.RosBridgeClient
         private void ServiceCallHandler(PlanSrvResponse res)
         {
             Debug.Log(res.feedback.data);
-
             test = res.feedback.data;
 
         }
@@ -134,6 +129,16 @@ namespace RosSharp.RosBridgeClient
             else
                 serviceName = "iiwa/planService";
 
+        }
+
+        private Vector3 poseAdjustment(Vector3 position)
+        {
+            Dropdown dropdown = GameObject.Find("RobotSelection").GetComponent<Dropdown>();
+            GameObject robot = GameObject.Find(dropdown.options[dropdown.value].text);
+            //Debug.Log(robot);
+            //Debug.Log(position + robot.transform.position);
+
+            return position - robot.transform.position;
         }
     }
 }

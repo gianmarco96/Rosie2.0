@@ -21,13 +21,11 @@ public enum EntityType
 
 public class KSMP : MonoBehaviour
 {
-
-    public string NetworkMasterIP = "ws://192.168.0.67:9090";
+    public string NetworkMasterIP = "ws://192.168.1.2:9090";
     public KSMPs TypeOfKSMP = KSMPs.ROS;
     public EntityType TypeOfEntity = EntityType.manipulator;
     public bool planRobot = false;
     public string Topic = "iiwa/joint_states";
-    public string ActionName = "move_group";
 
 
     private UrdfRobot UrdfRobot;
@@ -36,33 +34,24 @@ public class KSMP : MonoBehaviour
     private RosConnector RosConnector;
     private JointStatePatcher JointPatcher;
     private JointStateSubscriber JointStateSubscriber;
-    //private UnityFibonacciActionClient UnityFibonacciActionClient;
     
 
     public void Awake()
     {
         UrdfRobot = GetComponents<UrdfRobot>()[0];
-        // gameObject.AddComponent<Status2Text>();
         switch (TypeOfKSMP)
         {
             case KSMPs.ROS:
-                //gameObject.AddComponent<RosConnector>();
-                //gameObject.AddComponent<PoseArrayPublisher>();
-                // If it does not exist
-             /*   if (GameObject.Find("RosConnector") == null)
-                {
-                    RosConnectorObj = new GameObject("RosConnector");
-                }
-                else
-                    RosConnectorObj = GameObject.Find("RosConnector");
-             */
 
-                if (!planRobot) 
-                { 
-                    //RosConnector = RosConnectorObj.AddComponent<RosConnector>();
-                    //gameObject.AddComponent<PoseArrayPublisher>();
-                 }
-               // RosConnector = RosConnectorObj.GetComponent<RosConnector>();
+                /*   if (GameObject.Find("RosConnector") == null)
+                   {
+                       RosConnectorObj = new GameObject("RosConnector");
+                   }
+                   else
+                       RosConnectorObj = GameObject.Find("RosConnector");
+                */
+
+                //RosConnector = RosConnectorObj.GetComponent<RosConnector>();
                 //RosConnector.RosBridgeServerUrl = NetworkMasterIP;
                 switch (TypeOfEntity)
                 {
@@ -76,7 +65,6 @@ public class KSMP : MonoBehaviour
                             JointStateSubscriber = gameObject.GetComponent<JointStateSubscriber>();
                             JointStateSubscriber.Topic = Topic;
 
-                            //gameObject.AddComponent<ExecuteTrajFeedbackSub>();
                         }
                         else
                         {
