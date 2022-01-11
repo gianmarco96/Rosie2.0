@@ -1,0 +1,18 @@
+[  0%] Built target _file_server_generate_messages_check_deps_SaveBinaryFile
+[  0%] Built target _file_server_generate_messages_check_deps_GetBinaryFile
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_py
+[ 14%] Built target file_server_generate_messages_cpp
+[ 28%] Built target file_server_generate_messages_lisp
+[ 50%] Built target file_server_generate_messages_eus
+[ 64%] Built target file_server_generate_messages_nodejs
+[ 85%] Built target file_server_generate_messages_py
+[ 85%] Built target file_server_gencpp
+[ 85%] Built target file_server_generate_messages
+[35m[1mScanning dependencies of target file_server[0m
+[ 92%] [32mBuilding CXX object CMakeFiles/file_server.dir/src/file_server.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/uk-ras-mrc/Rosie2.0/devel/.private/file_server/lib/file_server/file_server[0m
+[100%] Built target file_server

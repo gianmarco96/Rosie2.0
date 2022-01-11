@@ -1,0 +1,1 @@
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur5_moveit_config/lib/pkgconfig/ur5_moveit_config.pc

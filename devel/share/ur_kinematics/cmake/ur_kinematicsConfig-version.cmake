@@ -1,0 +1,1 @@
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_kinematics/share/ur_kinematics/cmake/ur_kinematicsConfig-version.cmake

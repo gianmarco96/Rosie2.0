@@ -23,9 +23,7 @@ bool plan_motion_service(rosie2_test::PlanSrv::Request  &req, rosie2_test::PlanS
 {
     
     moveit::planning_interface::MoveGroupInterface::Plan my_plan;
-    ROS_INFO("**************************** Planning request received");
-    std::cout << "Planning " << std::to_string(req.plan);
-    std::cout << "****************************Pose size: "<< req.pose_goal.poses.size() << std::endl;
+    ROS_INFO("Planning request received");
 
     static const std::string PLANNING_GROUP = "manipulator";
     moveit::planning_interface::MoveGroupInterface move_group(PLANNING_GROUP);
@@ -36,7 +34,8 @@ bool plan_motion_service(rosie2_test::PlanSrv::Request  &req, rosie2_test::PlanS
     if(req.pose_goal.poses.size()==1)
     {
         move_group.setPoseTarget(req.pose_goal.poses[0]);
-        
+        std::cout << "For debugging only" << std::endl;
+        std::cout << req.pose_goal.poses[0] << std::endl;
         success = (move_group.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
         if(!req.plan){
             success = (move_group.move() == moveit::planning_interface::MoveItErrorCode::SUCCESS);

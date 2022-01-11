@@ -1,0 +1,1 @@
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_bringup/share/ur_bringup/cmake/ur_bringupConfig.cmake

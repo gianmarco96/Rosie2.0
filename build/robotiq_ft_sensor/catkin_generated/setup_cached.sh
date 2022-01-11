@@ -8,6 +8,9 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_ft_sensor:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_ft_sensor/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_ft_sensor/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/uk-ras-mrc/Rosie2.0/build/robotiq_ft_sensor'
+export PYTHONPATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_ft_sensor/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/uk-ras-mrc/Rosie2.0/devel/.private/robotiq_ft_sensor/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/uk-ras-mrc/Rosie2.0/src/robotiq/robotiq_ft_sensor:$ROS_PACKAGE_PATH"

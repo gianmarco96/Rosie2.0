@@ -1,0 +1,12 @@
+ur/universal_robot/ur_driver
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/cmake.lock /home/uk-ras-mrc/Rosie2.0/devel/./cmake.lock
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/share/ur_driver/docs/URDriverConfig-usage.dox /home/uk-ras-mrc/Rosie2.0/devel/share/ur_driver/docs/URDriverConfig-usage.dox
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/share/ur_driver/docs/URDriverConfig.wikidoc /home/uk-ras-mrc/Rosie2.0/devel/share/ur_driver/docs/URDriverConfig.wikidoc
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/share/ur_driver/docs/URDriverConfig.dox /home/uk-ras-mrc/Rosie2.0/devel/share/ur_driver/docs/URDriverConfig.dox
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/share/ur_driver/cmake/ur_driverConfig-version.cmake /home/uk-ras-mrc/Rosie2.0/devel/share/ur_driver/cmake/ur_driverConfig-version.cmake
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/share/ur_driver/cmake/ur_driverConfig.cmake /home/uk-ras-mrc/Rosie2.0/devel/share/ur_driver/cmake/ur_driverConfig.cmake
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/lib/pkgconfig/ur_driver.pc /home/uk-ras-mrc/Rosie2.0/devel/lib/pkgconfig/ur_driver.pc
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/lib/python2.7/dist-packages/ur_driver/__init__.py /home/uk-ras-mrc/Rosie2.0/devel/lib/python2.7/dist-packages/ur_driver/__init__.py
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/lib/python2.7/dist-packages/ur_driver/cfg/__init__.py /home/uk-ras-mrc/Rosie2.0/devel/lib/python2.7/dist-packages/ur_driver/cfg/__init__.py
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/lib/python2.7/dist-packages/ur_driver/cfg/URDriverConfig.py /home/uk-ras-mrc/Rosie2.0/devel/lib/python2.7/dist-packages/ur_driver/cfg/URDriverConfig.py
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_driver/include/ur_driver/URDriverConfig.h /home/uk-ras-mrc/Rosie2.0/devel/include/ur_driver/URDriverConfig.h

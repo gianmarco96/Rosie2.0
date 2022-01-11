@@ -1,0 +1,4 @@
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/ur_calibration/cmake/ur_calibrationConfig-version.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/ur_calibration/cmake/ur_calibrationConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/pkgconfig/ur_calibration.pc
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/ur_calibration/calibration_correction

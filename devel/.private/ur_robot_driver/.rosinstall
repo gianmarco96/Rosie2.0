@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/uk-ras-mrc/Rosie2.0/devel/.private/ur_robot_driver/setup.sh

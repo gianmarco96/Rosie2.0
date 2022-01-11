@@ -1,0 +1,1 @@
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_msgs/share/roseus/ros/ur_msgs/msg/Digital.l

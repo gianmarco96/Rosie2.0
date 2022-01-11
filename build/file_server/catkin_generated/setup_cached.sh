@@ -8,6 +8,9 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/file_server:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/file_server/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/file_server/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/uk-ras-mrc/Rosie2.0/build/file_server'
+export PYTHONPATH="/home/uk-ras-mrc/Rosie2.0/devel/.private/file_server/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/uk-ras-mrc/Rosie2.0/devel/.private/file_server/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/uk-ras-mrc/Rosie2.0/src/iiwa_stack/file_server:$ROS_PACKAGE_PATH"

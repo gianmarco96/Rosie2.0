@@ -1,0 +1,4 @@
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/controller_stopper/cmake/controller_stopperConfig.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/share/controller_stopper/cmake/controller_stopperConfig-version.cmake
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/controller_stopper/node
+Symlinking /home/uk-ras-mrc/Rosie2.0/devel/lib/pkgconfig/controller_stopper.pc

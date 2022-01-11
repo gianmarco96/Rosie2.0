@@ -1,0 +1,5 @@
+ur/universal_robot/ur_gazebo
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_gazebo/cmake.lock /home/uk-ras-mrc/Rosie2.0/devel/./cmake.lock
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_gazebo/share/ur_gazebo/cmake/ur_gazeboConfig-version.cmake /home/uk-ras-mrc/Rosie2.0/devel/share/ur_gazebo/cmake/ur_gazeboConfig-version.cmake
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_gazebo/share/ur_gazebo/cmake/ur_gazeboConfig.cmake /home/uk-ras-mrc/Rosie2.0/devel/share/ur_gazebo/cmake/ur_gazeboConfig.cmake
+/home/uk-ras-mrc/Rosie2.0/devel/.private/ur_gazebo/lib/pkgconfig/ur_gazebo.pc /home/uk-ras-mrc/Rosie2.0/devel/lib/pkgconfig/ur_gazebo.pc
