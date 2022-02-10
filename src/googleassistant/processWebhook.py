@@ -17,11 +17,13 @@ def callback(data):
     global fulfillmentString
     fulfillmentString = data.data
     var = json.dumps({'fulfillmentText': data.data})
-    print(json.dumps({'fulfillmentText': data.data}))
+    #print(json.dumps({'fulfillmentText': data.data}))
 
 threading.Thread(target=lambda: rospy.init_node('example_node', disable_signals=True)).start()
 
 rospy.Subscriber("/google_transcript", String, callback)
+#global fulfillmentHandler
+fulfillmentHandler = rospy.Publisher("fulfillmentHandler", String, queue_size=True)
 
 
 
@@ -44,9 +46,10 @@ def home():
 @app.route('/webhook', methods=['POST'])
 def webhook():
     global fulfillmentString
+    global req
     req = request.get_json(force=True)
-    print(str(fulfillmentString))
-    #print(req)
+    #print(str(fulfillmentString))
+    fulfillmentHandler.publish(str(req))
     return json.dumps({'fulfillmentText': fulfillmentString})
     
 
