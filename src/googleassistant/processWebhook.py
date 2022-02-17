@@ -1,7 +1,9 @@
 import flask
 import os
+import ast
 import json
 import threading
+#import test
 from flask import send_from_directory, request, render_template
 '''
 ###################### ROS stuff ############################
@@ -21,7 +23,7 @@ def callback(data):
 
 threading.Thread(target=lambda: rospy.init_node('example_node', disable_signals=True)).start()
 
-rospy.Subscriber("/google_transcript", String, callback)
+rospy.Subscriber("/google_response", String, callback)
 #global fulfillmentHandler
 fulfillmentHandler = rospy.Publisher("fulfillmentHandler", String, queue_size=True)
 
@@ -48,7 +50,7 @@ def webhook():
     global fulfillmentString
     global req
     req = request.get_json(force=True)
-    #print(str(fulfillmentString))
+    req = (req)['queryResult']['intent']['displayName']
     fulfillmentHandler.publish(str(req))
     return json.dumps({'fulfillmentText': fulfillmentString})
     

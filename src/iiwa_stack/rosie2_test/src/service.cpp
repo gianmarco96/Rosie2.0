@@ -25,7 +25,7 @@ bool plan_motion_service(rosie2_test::PlanSrv::Request  &req, rosie2_test::PlanS
     moveit::planning_interface::MoveGroupInterface::Plan my_plan;
     ROS_INFO("Planning request received");
 
-    static const std::string PLANNING_GROUP = "manipulator";
+    static const std::string PLANNING_GROUP = "/ur5/manipulator";
     moveit::planning_interface::MoveGroupInterface move_group(PLANNING_GROUP);
     bool success;
 
