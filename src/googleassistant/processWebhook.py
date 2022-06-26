@@ -20,7 +20,9 @@ def callback(data):
     fulfillmentString = data.data
     var = json.dumps({'fulfillmentText': data.data})
     #print(json.dumps({'fulfillmentText': data.data}))
+    
 
+# Creating a second thread that will handle the ROS node
 threading.Thread(target=lambda: rospy.init_node('example_node', disable_signals=True)).start()
 
 rospy.Subscriber("/google_response", String, callback)
