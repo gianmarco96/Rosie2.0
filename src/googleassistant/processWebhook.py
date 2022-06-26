@@ -11,7 +11,7 @@ from flask import send_from_directory, request, render_template
 import rospy
 from std_msgs.msg import String
 
-fulfillmentString = 'oi'
+fulfillmentString = 'some Google response'
 var = json.dumps({'fulfillmentText': 'fulfillmentString'})
 
 
