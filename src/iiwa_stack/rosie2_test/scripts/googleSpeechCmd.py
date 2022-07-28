@@ -6,9 +6,11 @@ import geometry_msgs.msg
 import sys
 from std_msgs.msg import String
 
-go_home = False
+
+
 
 def fulfillment_callback(data):
+    global go_home
     print(data)
     if(data.data == "home position"):
         go_home = True
@@ -19,7 +21,7 @@ def fulfillment_callback(data):
 moveit_commander.roscpp_initialize(sys.argv)
 rospy.init_node('move_group_python_interface_tutorial',
                 anonymous=True)
-rospy.Subscriber("/fulfillmentHandler", String, fulfillment_callback)
+rospy.Subscriber("fulfillmentHandler", String, fulfillment_callback)
 google_res = rospy.Publisher("/google_response", String, queue_size=True)
 
 #robot = moveit_commander.RobotCommander()
@@ -40,15 +42,19 @@ joint_goal[5] = 0
 joint_goal[6] = 0
 #group.go(joint_goal, wait=True)
 
-while(not rospy.is_shutdown()):
-    #rospy.sleep(.1)
-    #print(go_home)
-    if go_home== True:
-        print(go_home)
-        google_res.publish("should b mving")
-        group.go(joint_goal, wait=True)
-        go_home = False
+go_home = False
 
-    #rospy.spin()
 
+if __name__ == '__main__':
+    while(not rospy.is_shutdown()):
+        rospy.sleep(.1)
+        #print(go_home)
+        if go_home== True:
+            print(go_home)
+            print("should b mving")
+            #google_res.publish("should b mving")
+            group.go(joint_goal, wait=True)
+            go_home = False
+
+    rospy.spin()
 
